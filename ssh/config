@@ -1,0 +1,5 @@
+# Company account
+Host other
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_other
