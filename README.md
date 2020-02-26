@@ -12,7 +12,7 @@ Just the files, no auto-install, no bootstrap script
 | .bash_aliases                | ~/.bash_aliases                                                     |
 | modules                      | /etc/modules                                                        |
 | sysctl.conf                  | /etc/sysctl.config                                                  |
-| fancontro                    | /etc/fancontrol                                                     |
+| fancontrol                   | /etc/fancontrol                                                     |
 | grub                         | /etc/default/grub                                                   |
 | htop                         | ~/.config/htop/htoprc                                               |
 | .imwheelrc                   | ~/.imwheelrc                                                        |
