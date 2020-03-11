@@ -34,8 +34,10 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 export ZSH="/home/bledy/.oh-my-zsh"
 
 plugins=(
-    autoenv
+    pip
+    heroku
     compleat
+    rand-quote
     safe-paste
     zsh-completions
     colored-man-pages
