@@ -24,7 +24,7 @@ shell:
 visual_bell:
   animation: EaseOutExpo
   duration: 10
-background_opacity: 0.95
+background_opacity: 0.90
 cursor:
   style: Block
 unfocused_hollow: true
