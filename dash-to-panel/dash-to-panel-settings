@@ -85,6 +85,7 @@ force-check-update=false
 group-apps=false
 group-apps-label-font-color='#dddddd'
 group-apps-label-font-size=12
+group-apps-label-font-weight='inherit'
 group-apps-label-max-width=60
 group-apps-underline-unfocused=true
 group-apps-use-fixed-width=true
