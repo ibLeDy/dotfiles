@@ -4,6 +4,8 @@ Just the files, no auto-install, no bootstrap script
 
 ## Where do i place them
 
+Please, consider following the [XDG Base Directory specification](https://wiki.archlinux.org/index.php/XDG_Base_Directory) instead.
+
 | File                         | Location                                                            |
 |:----------------------------:|:-------------------------------------------------------------------:|
 | .bashrc                      | ~/.bashrc                                                           |
