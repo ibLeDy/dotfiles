@@ -35,7 +35,6 @@ export ZSH="/home/bledy/.oh-my-zsh"
 
 plugins=(
     pip
-    heroku
     compleat
     rand-quote
     safe-paste
