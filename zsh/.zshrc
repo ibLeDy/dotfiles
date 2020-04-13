@@ -11,17 +11,11 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="/home/bledy/.oh-my-zsh"
 
-# ZSH_THEME="risto"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_COLORIZE_STYLE="colorful"
 COMPLETION_WAITING_DOTS="false"
 HIST_STAMPS="mm/dd/yyyy"
 # ENABLE_CORRECTION="true"
-
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-bindkey '^ ' autosuggest-accept
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -34,14 +28,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 export ZSH="/home/bledy/.oh-my-zsh"
 
 plugins=(
-    pip
     compleat
     rand-quote
     safe-paste
     zsh-completions
     colored-man-pages
     virtualenvwrapper
-    zsh-autosuggestions
     zsh-syntax-highlighting
 )
 
