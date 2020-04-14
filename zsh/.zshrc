@@ -34,7 +34,6 @@ plugins=(
     zsh-completions
     colored-man-pages
     virtualenvwrapper
-    zsh-syntax-highlighting
 )
 
 alias ytdl='youtube-dl --merge-output-format mkv'
