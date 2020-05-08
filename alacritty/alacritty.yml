@@ -7,7 +7,7 @@ window:
   padding:
     x: 0
     y: 0
-  decorations: full
+  decorations: none
 scrolling:
   history: 10000
   multiplier: 2
@@ -24,7 +24,7 @@ shell:
 visual_bell:
   animation: EaseOutExpo
   duration: 10
-background_opacity: 0.90
+background_opacity: 0.95
 cursor:
   style: Block
 unfocused_hollow: true
