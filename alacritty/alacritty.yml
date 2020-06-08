@@ -19,7 +19,7 @@ font:
   normal:
     family: UbuntuMono Nerd Font
     style: Regular
-  size: 11.0
+  size: 11.5
 dynamic_title: true
 live_config_reload: true
 shell:
