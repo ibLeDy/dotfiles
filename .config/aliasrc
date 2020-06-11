@@ -18,4 +18,5 @@ alias \
     gc="git commit -v" \
     gss="git status -s" \
     ytdl="youtube-dl --merge-output-format mkv" \
-    lbrynet="/opt/LBRY/resources/static/daemon/lbrynet"
+    lbrynet="/opt/LBRY/resources/static/daemon/lbrynet" \
+    tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf"

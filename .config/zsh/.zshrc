@@ -11,8 +11,6 @@ HISTFILE=$XDG_CACHE_HOME/zsh/history
 # This makes repository status check for large repositories much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-export ZSH="/home/bledy/.oh-my-zsh"
-
 plugins=(
     compleat
     rand-quote
