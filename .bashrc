@@ -116,4 +116,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Load aliases if existent
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
