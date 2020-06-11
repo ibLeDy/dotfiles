@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Verbosity
+alias \
+    cp="cp -iv" \
+    mv="mv -iv" \
+    rm="rm -vI"
+
+# Colorize commands when possible.
+alias \
+    ls="ls -hN --color=auto --group-directories-first" \
+    grep="grep --color=auto" \
+    diff="diff --color=auto"
+
+# Shorter commands
+alias \
+    open="xdg-open" \
+    gc="git commit -v" \
+    gss="git status -s" \
+    ytdl="youtube-dl --merge-output-format mkv" \
+    lbrynet="/opt/LBRY/resources/static/daemon/lbrynet"
