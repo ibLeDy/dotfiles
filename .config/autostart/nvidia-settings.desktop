@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=nvidia-settings -a '[gpu:0]/GPUFanControlState=1' -a '[fan:0]/GPUTargetFanSpeed=70'
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=fan-control
+Name=fan-control
+Comment[en_US]=Set gpu fan to 70%
+Comment=Set gpu fan to 70%
