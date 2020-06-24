@@ -37,8 +37,9 @@ export GPG_TTY=$(tty)
 # export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
 
 # Python
+export PYTHONPATH="$HOME/.local/lib/python3.7:$PYTHONPATH"
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source "$VIRTUALENVWRAPPER_SCRIPT"
+source "$HOME/.local/bin/virtualenvwrapper.sh"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
