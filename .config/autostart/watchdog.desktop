@@ -4,6 +4,7 @@ Exec=watchdog
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=15
 Name[en_US]=Watchdog
 Name=Watchdog
 Comment[en_US]=Custom monitoring script (htop & nethogs)
