@@ -26,6 +26,12 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# gnome-keyring
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start --components=secrets,ssh)
+    export SSH_AUTH_SOCK
+fi
+
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -55,4 +61,4 @@ export GEM_HOME="$HOME/gems"
 # Default programs:
 export EDITOR="subl"
 export TERMINAL="alacritty"
-export BROWSER="brave-browser"
+export BROWSER="google-chrome"
