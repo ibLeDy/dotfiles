@@ -15,7 +15,6 @@ window:
 scrolling:
   history: 10000
   multiplier: 2
-  auto_scroll: false
 font:
   normal:
     family: UbuntuMono Nerd Font
