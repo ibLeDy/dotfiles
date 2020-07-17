@@ -151,20 +151,22 @@ for_window [class=".*"] border pixel 2
 bindsym Print exec flameshot gui
 
 # multimedia keys
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioStop exec playerctl stop
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%; exec pkill -SIGRTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%; exec pkill -SIGRTMIN+10 i3blocks
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle; exec notify-send "Audio mute toggle"
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioStop exec --no-startup-id playerctl stop
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%; exec pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%; exec pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle; exec notify-send "Audio mute toggle"
 
 # startup scripts
 exec --no-startup-id gpu_fan
 exec --no-startup-id fix_volume
 exec --no-startup-id imwheel --kill --buttons "4 5"
-exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id xset -dpms s off
+exec --no-startup-id feh --bg-fill Pictures/Wallpapers/blacker-diamond.png
+exec --no-startup-id redshift -l geoclue2
+#exec --no-startup-id kdeconnect-indicator
 
 # disable mouse focusing and warping
 focus_follows_mouse no
