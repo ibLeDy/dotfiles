@@ -1,0 +1,40 @@
+command=$HOME/.local/bin/statusbar/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[mediaplayer]
+instance=spotify
+interval=5
+signal=10
+
+[volume 5% pulse]
+label=♫
+interval=once
+signal=10
+
+[memory]
+label=RAM
+instance=mem
+separator=false
+interval=30
+
+[memory]
+label=SWAP
+instance=swap
+interval=30
+
+[disk]
+label=
+interval=60
+
+[bandwidth]
+interval=1
+
+[cpu_usage -w 80 -c 90]
+label=
+interval=1
+
+[time]
+label=
+command=date '+%Y-%m-%d %H:%M'
+interval=30
