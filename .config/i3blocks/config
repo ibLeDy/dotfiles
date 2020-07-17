@@ -6,10 +6,11 @@ markup=pango
 #instance=spotify
 #separator=false
 #interval=5
+#label=♫
 #signal=10
 
 [volume 5% pulse]
-label=♫
+label=
 interval=once
 signal=10
 
@@ -28,17 +29,18 @@ interval=30
 label=
 interval=60
 
-[bandwidth]
-interval=1
+#[bandwidth]
+#interval=1
 
 [cpu_usage -w 80 -c 90]
 label=
 separator=false
+full_text=loading...
 interval=1
 
 [cpu_temp]
 interval=1
 
 [time]
-command=date '+%Y-%m-%d %H:%M:%S'
+command=date '+%c'
 interval=5
