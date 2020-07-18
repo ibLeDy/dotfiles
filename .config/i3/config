@@ -12,9 +12,6 @@ bindsym $mod+Return exec i3-sensible-terminal
 # start a file explorer
 bindsym $mod+Shift+Return exec --no-startup-id alacritty -e ranger
 
-# kill focused window
-bindsym $mod+Shift+q kill
-
 # applications menu
 bindsym $mod+p exec --no-startup-id i3-dmenu-desktop
 
@@ -215,3 +212,10 @@ hide_edge_borders none
 
 # gaps-specific
 smart_borders on
+
+# quasi fibonacci
+default_orientation vertical
+for_window [class=".*"] split toggle
+
+## reset split when killing focused window
+bindsym $mod+Shift+q split toggle kill
