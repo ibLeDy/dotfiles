@@ -153,9 +153,6 @@ bar {
         }
 }
 
-# do not hide borders
-hide_edge_borders none
-
 # set floating classes
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="popup"] floating enable
@@ -182,9 +179,6 @@ workspace 7 output primary
 workspace 8 output DVI-D-1
 workspace 9 output DVI-D-1
 workspace 10 output DVI-D-1
-
-# disable title and set border for all windows
-for_window [class=".*"] border pixel 2
 
 # screenshot tool
 bindsym Print exec flameshot gui
@@ -214,3 +208,10 @@ exec --no-startup-id kdeconnect-indicator
 # disable mouse focusing and warping
 focus_follows_mouse no
 mouse_warping none
+
+# borders
+for_window [class=".*"] border pixel 2
+hide_edge_borders none
+
+# gaps-specific
+smart_borders on
