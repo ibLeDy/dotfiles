@@ -157,6 +157,13 @@ bar {
 hide_edge_borders none
 
 # set floating classes
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="popup"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
 for_window [class="Gnome-tweaks"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Org.gnome.Nautilus"] floating enable
