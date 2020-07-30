@@ -12,6 +12,7 @@ HISTFILE=$XDG_CACHE_HOME/zsh/history
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
+    colorize
     compleat
     rand-quote
     safe-paste
