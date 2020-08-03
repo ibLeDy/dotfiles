@@ -5,7 +5,9 @@
 	],
 	"installed_packages":
 	[
-		"MarkdownLivePreview",
+		"Jedi - Python autocompletion",
+		"Material Theme",
+		"One Dark Material - Theme",
 		"Package Control"
 	]
 }

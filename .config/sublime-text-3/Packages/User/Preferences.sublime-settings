@@ -1,7 +1,7 @@
 {
 	"adaptive_dividers": true,
 	"always_prompt_for_file_reload": false,
-	"always_show_minimap_viewport": false,
+	"always_show_minimap_viewport": true,
 	"animation_enabled": true,
 	"atomic_save": false,
 	"auto_close_tags": true,
@@ -16,6 +16,10 @@
 		{
 			"characters": "<",
 			"selector": "text.html"
+		},
+		{
+			"characters": ".",
+			"selector": "source.python"
 		}
 	],
 	"auto_complete_with_fields": false,
@@ -44,7 +48,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "solid",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/Darcula.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"copy_with_empty_selection": true,
 	"create_window_at_startup": true,
 	"default_encoding": "UTF-8",
@@ -97,7 +101,8 @@
 	"font_face": "Fira Code",
 	"font_options":
 	[
-		"gdi"
+		"subpixel_antialias",
+		"no_calt"
 	],
 	"font_size": 10,
 	"gpu_window_buffer": "auto",
@@ -167,9 +172,8 @@
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
 	"ui_scale": 1.0,
-	"update_check": false,
 	"use_tab_stops": true,
 	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
 	"word_wrap": false,
-	"wrap_width": 0
+	"wrap_width": 0,
 }
