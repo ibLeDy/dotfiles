@@ -12,6 +12,12 @@ alias \
     grep="grep --color=auto" \
     diff="diff --color=auto"
 
+# VSCode GPU acceleration
+alias code="code \
+--ignore-gpu-blacklist \
+--enable-gpu-rasterization \
+--enable-oop-rasterization %F"
+
 # Shorter commands
 alias \
     open="xdg-open" \
