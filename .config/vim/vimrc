@@ -70,7 +70,3 @@ set incsearch
 set ignorecase
 " Include only uppercase words with uppercase search term
 set smartcase
-
-" Automatically save and load folds
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview"
