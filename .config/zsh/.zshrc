@@ -12,12 +12,23 @@ plugins=(
     colorize
     colored-man-pages
     compleat
+    history-substring-search
     safe-paste
     virtualenvwrapper
     # zsh-autosuggestions
     zsh-completions
     # zsh-syntax-highlighting
 )
+
+# Reload the completion for `zsh-completions`
+autoload -U compinit && compinit
+
+# Keybindings for history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# Accept current suggestion with `ctrl + space`
+# bindkey '^ ' autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
 
