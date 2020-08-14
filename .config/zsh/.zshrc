@@ -12,7 +12,6 @@ plugins=(
     colorize
     colored-man-pages
     compleat
-    history-substring-search
     safe-paste
     virtualenvwrapper
     # zsh-autosuggestions
@@ -22,10 +21,6 @@ plugins=(
 
 # Reload the completion for `zsh-completions`
 autoload -U compinit && compinit
-
-# Keybindings for history-substring-search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
 
 # Accept current suggestion with `ctrl + space`
 # bindkey '^ ' autosuggest-accept
