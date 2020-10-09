@@ -62,4 +62,4 @@ export GEM_HOME="$HOME/gems"
 # Default programs:
 export EDITOR="subl"
 export TERMINAL="alacritty"
-export BROWSER="google-chrome"
+export BROWSER="brave-browser"
