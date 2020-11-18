@@ -57,9 +57,10 @@ export PATH="$HOME/gems/bin:$PATH"
 export GEM_HOME="$HOME/gems"
 
 # Go
+export PATH="$HOME/go/bin:$PATH"
 # export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 
 # Default programs:
 export EDITOR="subl"
 export TERMINAL="alacritty"
-export BROWSER="brave-browser"
+export BROWSER="google-chrome"
