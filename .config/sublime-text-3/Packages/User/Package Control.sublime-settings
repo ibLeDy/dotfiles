@@ -5,10 +5,9 @@
 	],
 	"installed_packages":
 	[
-		"Discord Rich Presence",
 		"Jedi - Python autocompletion",
+		"MarkdownPreview",
 		"Material Theme",
-		"One Dark Material - Theme",
 		"Package Control"
 	]
 }
