@@ -45,15 +45,14 @@
     "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
     "editor.wrappingIndent": "deepIndent",
     "errorLens.addNumberOfDiagnostics": true,
-    "explorer.autoReveal": "focusNoScroll",
     "explorer.confirmDragAndDrop": false,
     "extensions.autoUpdate": false,
-    "extensions.showRecommendationsOnlyOnDemand": true,
     "files.associations": {
         "**/*.html": "html",
         "**/requirements{/**,*}.{txt,in}": "pip-requirements",
         "**/templates/**/*": "django-txt",
-        "**/templates/**/*.html": "django-html"
+        "**/templates/**/*.html": "django-html",
+        "*.txt": "plaintext"
     },
     "files.autoSave": "off",
     "files.encoding": "utf8",
@@ -67,7 +66,6 @@
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
     "githubPullRequests.telemetry.enabled": false,
-    "gitlens.advanced.telemetry.enabled": false,
     "gitlens.blame.highlight.locations": [
         "overview",
         "gutter",
@@ -86,7 +84,6 @@
     "python.analysis.extraPaths": [
         "./src"
     ],
-    "python.analysis.memory.keepLibraryLocalVariables": true,
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.useLibraryCodeForTypes": true,
     "python.autoComplete.extraPaths": [
@@ -128,8 +125,6 @@
     "python.venvPath": "~/.virtualenvs",
     "rust-analyzer.lens.enable": false,
     "scm.alwaysShowRepositories": true,
-    "sync.forceUpload": true,
-    "sync.quietSync": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.integrated.fontFamily": "UbuntuMono Nerd Font",
@@ -154,9 +149,9 @@
     "workbench.editorAssociations": [],
     "workbench.enableExperiments": false,
     "workbench.iconTheme": "vscode-icons",
-    "workbench.list.openMode": "doubleClick",
     "workbench.list.smoothScrolling": true,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.statusBar.visible": true,
     "workbench.tree.indent": 22,
+    "python.analysis.memory.keepLibraryAst": true,
 }
