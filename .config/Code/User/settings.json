@@ -154,4 +154,9 @@
     "workbench.statusBar.visible": true,
     "workbench.tree.indent": 22,
     "python.analysis.memory.keepLibraryAst": true,
+    "workbench.sash.size": 8,
+    "workbench.preferredDarkColorTheme": "Sublime Material Theme - Dark",
+    "terminal.external.linuxExec": "alacritty",
+    "terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
+    "terminal.integrated.enableBell": true,
 }
