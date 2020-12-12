@@ -44,17 +44,17 @@ export GPG_TTY=$(tty)
 # export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
 
 # Python
-export PYTHONPATH="$HOME/.local/lib/python3.7:$PYTHONPATH"
+# export PYTHONPATH="$HOME/.local/lib/python3.8:$PYTHONPATH"
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source "$HOME/.local/bin/virtualenvwrapper.sh"
+# source "$HOME/.local/bin/virtualenvwrapper.sh"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 # export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 
 # Ruby
-export PATH="$HOME/gems/bin:$PATH"
-export GEM_HOME="$HOME/gems"
+# export PATH="$HOME/gems/bin:$PATH"
+# export GEM_HOME="$HOME/gems"
 
 # Go
 # export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
@@ -62,4 +62,4 @@ export GEM_HOME="$HOME/gems"
 # Default programs:
 export EDITOR="subl"
 export TERMINAL="alacritty"
-export BROWSER="brave-browser"
+export BROWSER="google-chrome"
