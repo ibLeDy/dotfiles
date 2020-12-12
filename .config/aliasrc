@@ -7,7 +7,7 @@
 alias \
     cp="cp -iv" \
     mv="mv -iv" \
-    rm="rm -vI"
+    rm="rm -Iv"
 
 # Colorize commands when possible.
 alias \
