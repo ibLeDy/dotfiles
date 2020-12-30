@@ -11,6 +11,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
     colorize
     colored-man-pages
+    git
     compleat
     safe-paste
     virtualenvwrapper

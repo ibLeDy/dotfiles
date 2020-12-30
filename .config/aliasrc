@@ -18,8 +18,5 @@ alias \
 # Shorter commands
 alias \
     open="xdg-open" \
-    gc="git commit -v" \
-    gss="git status -s" \
-    glg="git log --stat" \
     ytdl="youtube-dl --merge-output-format mkv" \
     lbrynet="/opt/LBRY/resources/static/daemon/lbrynet"
