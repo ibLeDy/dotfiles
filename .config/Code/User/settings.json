@@ -21,7 +21,7 @@
     "editor.find.addExtraSpaceOnTop": false,
     "editor.find.seedSearchStringFromSelection": true,
     "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": false,
+    "editor.fontLigatures": true,
     "editor.fontSize": 13,
     "editor.formatOnPaste": true,
     "editor.formatOnType": true,
@@ -96,7 +96,7 @@
         "--skip-string-normalization"
     ],
     "python.formatting.provider": "none",
-    "python.languageServer": "Pylance",
+    "python.languageServer": "Microsoft",
     "python.linting.flake8Args": [
         "--max-line-length=88"
     ],
@@ -116,10 +116,9 @@
         "--show-error-codes",
         "--disallow-any-generics",
         "--follow-imports=silent",
-        "--ignore-missing-imports"
+        "--ignore-missing-imports",
+        "--disable-error-code=var-annotated"
     ],
-    "python.linting.pylintEnabled": false,
-    "python.linting.pylintUseMinimalCheckers": false,
     "python.pythonPath": "/usr/bin/python3",
     "python.showStartPage": false,
     "python.venvPath": "~/.virtualenvs",
@@ -136,7 +135,6 @@
     "vsintellicode.features.python.deepLearning": "enabled",
     "window.closeWhenEmpty": false,
     "window.menuBarVisibility": "toggle",
-    "window.openFilesInNewWindow": "on",
     "window.restoreFullscreen": false,
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName} ${dirty}",
     "window.titleBarStyle": "custom",
@@ -152,11 +150,14 @@
     "workbench.list.smoothScrolling": true,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.statusBar.visible": true,
-    "workbench.tree.indent": 22,
     "python.analysis.memory.keepLibraryAst": true,
     "workbench.sash.size": 8,
     "workbench.preferredDarkColorTheme": "Sublime Material Theme - Dark",
     "terminal.external.linuxExec": "alacritty",
     "terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
     "terminal.integrated.enableBell": true,
+    "workbench.tree.indent": 21,
+    "python.linting.enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.pylintUseMinimalCheckers": true,
 }
