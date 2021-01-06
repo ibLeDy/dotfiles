@@ -7,6 +7,7 @@ HIST_STAMPS="mm/dd/yyyy"
 HISTSIZE=10000
 SAVEHIST=10000
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_AUTO_UPDATE="true"
 
 plugins=(
     colorize
