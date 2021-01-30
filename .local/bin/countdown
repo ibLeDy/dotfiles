@@ -1,2 +1,0 @@
-#!/bin/sh
-i=${1:-10} ; while [ $i -gt 0 ]; do echo $i seconds remaining; i=`expr $i - 1`; sleep 1;  done
