@@ -326,7 +326,7 @@ bell:
   #     program: notify-send
   #     args: ["Hello, World!"]
   #
-  command: xkbbell
+  # command: xkbbell
 
 # Background opacity
 #
