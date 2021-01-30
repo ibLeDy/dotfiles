@@ -1,0 +1,7 @@
+[user]
+    email = deejaynof@gmail.com
+    name = Iago Alonso
+[core]
+    editor = subl -w
+[diff]
+    wsErrorHighlight = all
