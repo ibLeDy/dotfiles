@@ -5,3 +5,5 @@
     editor = subl -w
 [diff]
     wsErrorHighlight = all
+[credential]
+	helper = manager-core
