@@ -8,5 +8,3 @@
     gpgsign = true
 [diff]
     wsErrorHighlight = all
-[credential]
-    helper = manager-core
