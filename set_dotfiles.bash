@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir -p ~/.cache/zsh
 mkdir -p ~/.config/{alacritty,Code/User,dash-to-panel,flameshot,git,htop,i3,i3blocks,mpv,pulse,sublime-text-3/Packages/User,tmux,vim,zsh}
 cp .config/alacritty/alacritty.yml ~/.config/alacritty/
 cp .config/Code/User/{keybindings.json,settings.json} ~/.config/Code/User/
