@@ -10,9 +10,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 DISABLE_AUTO_UPDATE="true"
 
 plugins=(
+    git
     colorize
     colored-man-pages
-    git
     compleat
     safe-paste
     virtualenvwrapper
