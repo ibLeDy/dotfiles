@@ -19,10 +19,11 @@ cp ~/.config/sublime-text-3/Packages/User/{"Default (Linux).sublime-keymap","Pac
 cp ~/.config/tmux/tmux.conf .config/tmux/
 cp ~/.config/vim/vimrc .config/vim/
 cp ~/.config/zsh/.{p10k.zsh,zshrc} .config/zsh/
+# cp ~/.local/bin/{countdown,extramaus,fix-volume,mute-spotify-ads} .local/bin/
+cp ~/.profile .
+cp ~/.TilingAssistantExtension.layouts.json .
+cp ~/.ssh/config .ssh/
+
 sudo cp etc/asound.conf /etc/
 sudo cp /etc/X11/xorg.conf /etc/X11/
 sudo cp etc/default/grub /etc/default/
-# cp ~/.local/bin/{countdown,extramaus,fix-volume,mute-spotify-ads} .local/bin/
-cp .profile ~/
-cp .ssh/config ~/.ssh/
-cp ~/.TilingAssistantExtension.layouts.json .
