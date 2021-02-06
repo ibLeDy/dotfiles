@@ -22,7 +22,6 @@
     "editor.find.seedSearchStringFromSelection": true,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
-    "editor.fontSize": 13,
     "editor.formatOnPaste": true,
     "editor.formatOnType": true,
     "editor.largeFileOptimizations": false,
@@ -52,7 +51,7 @@
         "**/requirements{/**,*}.{txt,in}": "pip-requirements",
         "**/templates/**/*": "django-txt",
         "**/templates/**/*.html": "django-html",
-        "*.txt": "plaintext"
+        "**/*.txt": "plaintext",
     },
     "files.autoSave": "off",
     "files.encoding": "utf8",
@@ -72,7 +71,6 @@
         "line"
     ],
     "gitlens.codeLens.authors.enabled": false,
-    "gitlens.codeLens.enabled": false,
     "jupyter.sendSelectionToInteractiveWindow": false,
     "markdownlint.config": {
         "MD033": false
@@ -84,7 +82,6 @@
     "python.analysis.extraPaths": [
         "./src"
     ],
-    "python.analysis.typeCheckingMode": "basic",
     "python.analysis.useLibraryCodeForTypes": true,
     "python.autoComplete.extraPaths": [
         "./src"
@@ -96,9 +93,10 @@
         "--skip-string-normalization"
     ],
     "python.formatting.provider": "none",
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Pylance",
     "python.linting.flake8Args": [
-        "--max-line-length=88"
+        "--max-line-length=88",
+        "--ignore=E501"
     ],
     "python.linting.flake8CategorySeverity.F": "Information",
     "python.linting.flake8Enabled": true,
@@ -122,7 +120,6 @@
     "python.pythonPath": "/usr/bin/python3",
     "python.showStartPage": false,
     "python.venvPath": "~/.virtualenvs",
-    "rust-analyzer.lens.enable": false,
     "scm.alwaysShowRepositories": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
@@ -138,9 +135,8 @@
     "window.restoreFullscreen": false,
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName} ${dirty}",
     "window.titleBarStyle": "custom",
-    "window.zoomLevel": 0,
     "workbench.activityBar.visible": true,
-    "workbench.colorTheme": "Sublime Material Theme - Dark",
+    "workbench.colorTheme": "One Dark Pro",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.pinnedTabSizing": "shrink",
     "workbench.editor.tabCloseButton": "right",
@@ -151,13 +147,25 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.statusBar.visible": true,
     "python.analysis.memory.keepLibraryAst": true,
-    "workbench.sash.size": 8,
     "workbench.preferredDarkColorTheme": "Sublime Material Theme - Dark",
-    "terminal.external.linuxExec": "alacritty",
     "terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
     "terminal.integrated.enableBell": true,
     "workbench.tree.indent": 21,
     "python.linting.enabled": true,
-    "python.linting.mypyEnabled": true,
     "python.linting.pylintUseMinimalCheckers": true,
+    "workbench.colorCustomizations": {
+        "sash.hoverBorder": "#4B8BBE"
+    },
+    "editor.fontSize": 13,
+    "window.zoomLevel": 0,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.semanticHighlighting.enabled": false,
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "gitlens.codeLens.enabled": false,
+    "rust-analyzer.cargo.allFeatures": true,
+    "rust-analyzer.lens.enable": false,
+    "terminal.external.linuxExec": "gnome-terminal",
+    "python.linting.mypyEnabled": true,
 }
