@@ -1,13 +1,3 @@
-# ~/.profile: executed by the command interpreter for login shells.
-# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
-# exists.
-# see /usr/share/doc/bash/examples/startup-files for examples.
-# the files are located in the bash-doc package.
-
-# the default umask is set in /etc/profile; for setting the umask
-# for ssh logins, install and configure the libpam-umask package.
-#umask 022
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -45,7 +35,7 @@ export GPG_TTY=$(tty)
 
 # Python
 # export PYTHONPATH="$HOME/.local/lib/python3.8:$PYTHONPATH"
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_PYTHON="$(which python3)"
 # source "$HOME/.local/bin/virtualenvwrapper.sh"
 
 # Rust
