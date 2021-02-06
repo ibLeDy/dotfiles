@@ -17,12 +17,12 @@ plugins=(
     safe-paste
     virtualenvwrapper
     # zsh-autosuggestions
-    zsh-completions
+    # zsh-completions
     # zsh-syntax-highlighting
 )
 
 # Reload the completion for `zsh-completions`
-autoload -U compinit && compinit
+# autoload -U compinit && compinit
 
 # Accept current suggestion with `ctrl + space`
 # bindkey '^ ' autosuggest-accept
@@ -37,3 +37,6 @@ unsetopt AUTO_CD
 
 # Load aliases
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
+
+# Load alacritty's shell completions
+fpath+=${ZDOTDIR:-~}/.zsh_functions
