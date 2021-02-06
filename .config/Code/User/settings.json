@@ -186,4 +186,7 @@
     "terminal.external.linuxExec": "gnome-terminal",
     "python.linting.mypyEnabled": true,
     "workbench.editor.openPositioning": "last",
+    "editor.rulers": [
+        88,
+    ],
 }
