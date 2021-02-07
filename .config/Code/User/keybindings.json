@@ -25,7 +25,7 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+k ctrl+u",
+        "key": "ctrl+k u",
         "command": "editor.action.transformToUppercase"
     },
     {
@@ -34,7 +34,7 @@
         "when": "editorTextFocus && foldingEnabled"
     },
     {
-        "key": "ctrl+k ctrl+l",
+        "key": "ctrl+k l",
         "command": "editor.action.transformToLowercase"
     },
     {
