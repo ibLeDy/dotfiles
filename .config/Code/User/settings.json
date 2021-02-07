@@ -12,7 +12,7 @@
     "bracketPairColorizer.showBracketsInGutter": true,
     "bracketPairColorizer.showBracketsInRuler": true,
     "debug.console.fontSize": 13,
-    "discord.detailsEditing": "File: {dirname}/{filename}:{currentline}",
+    "discord.detailsEditing": "File: {filename}:{currentline}",
     "discord.largeImageIdle": "\"I was taking a shit\"",
     "discord.lowerDetailsDebugging": "Debugging {workspace}",
     "discord.lowerDetailsEditing": "Project: {workspace}:{gitbranch}",
@@ -51,7 +51,7 @@
     "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
     "editor.wrappingIndent": "deepIndent",
     "errorLens.addNumberOfDiagnostics": true,
-    "explorer.confirmDragAndDrop": true,
+    "explorer.confirmDragAndDrop": false,
     "explorer.autoReveal": true,
     "extensions.autoUpdate": false,
     "files.associations": {
@@ -75,6 +75,7 @@
         "**/.pytest_cache": true,
         "**/*.pyc": true,
         "**/*venv": true,
+        "**/*.egg-info": true,
         "**/__pycache__": true,
     },
     "files.hotExit": "onExit",
@@ -90,10 +91,10 @@
     "gitlens.codeLens.authors.enabled": false,
     "jupyter.sendSelectionToInteractiveWindow": false,
     "markdownlint.config": {
-        "MD033": false
+        "MD033": false,
+        "MD041": false,
     },
     "oneDarkPro.editorTheme": "vscode",
-    "oneDarkPro.markdownStyle": false,
     "partialDiff.enableTelemetry": false,
     "python.analysis.autoImportCompletions": false,
     "python.analysis.extraPaths": [
@@ -171,7 +172,7 @@
     "workbench.preferredDarkColorTheme": "Sublime Material Theme - Dark",
     "workbench.tree.indent": 21,
     "python.linting.enabled": true,
-    "python.linting.pylintUseMinimalCheckers": true,
+    "python.linting.pylintUseMinimalCheckers": false,
     "xmlTools.enforcePrettySelfClosingTagOnFormat": true,
     "xmlTools.enableXmlTreeView": false,
     "workbench.colorCustomizations": {
@@ -189,4 +190,14 @@
     "editor.rulers": [
         88,
     ],
+    "workbench.editor.wrapTabs": false,
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.decorations.colors": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "RPC.idleTimeout": 600,
+    "RPC.showProblems": false,
+    "RPC.placeholderText": "VSCode",
+    "oneDarkPro.markdownStyle": false,
+    "RPC.disconnectOnIdle": true,
+    "python.analysis.typeCheckingMode": "basic",
 }
