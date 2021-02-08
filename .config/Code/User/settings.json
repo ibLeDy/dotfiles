@@ -194,7 +194,7 @@
     "workbench.editor.decorations.badges": true,
     "workbench.editor.decorations.colors": true,
     "workbench.editor.enablePreviewFromCodeNavigation": true,
-    "RPC.idleTimeout": 600,
+    "RPC.idleTimeout": 1800,
     "RPC.showProblems": false,
     "RPC.placeholderText": "VSCode",
     "oneDarkPro.markdownStyle": false,
