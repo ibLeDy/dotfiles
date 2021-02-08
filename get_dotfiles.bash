@@ -25,6 +25,6 @@ cp ~/.TilingAssistantExtension.layouts.json .
 cp ~/.tmux.conf .
 cp ~/.ssh/config .ssh/
 
-sudo cp etc/asound.conf /etc/
-sudo cp /etc/X11/xorg.conf /etc/X11/
-sudo cp etc/default/grub /etc/default/
+sudo cp /etc/asound.conf etc/
+sudo cp /etc/X11/xorg.conf etc/X11/
+sudo cp /etc/default/grub etc/default/
