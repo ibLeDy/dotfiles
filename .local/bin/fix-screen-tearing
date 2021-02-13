@@ -1,0 +1,2 @@
+#!/bin/sh
+nvidia-settings --assign CurrentMetaMode="2560x1080_75 +1920+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}"

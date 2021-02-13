@@ -54,3 +54,8 @@ source "$HOME/.cargo/env"
 export EDITOR="subl"
 export TERMINAL="alacritty"
 export BROWSER="google-chrome"
+
+# Fix screen tearing
+if [ -f "$HOME/.local/bin/fix-screen-tearing" ]; then
+    sh -c "$HOME/.local/bin/fix-screen-tearing"
+fi
