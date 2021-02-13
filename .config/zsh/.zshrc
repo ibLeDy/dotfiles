@@ -40,3 +40,8 @@ unsetopt AUTO_CD
 
 # Load alacritty's shell completions
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+# Open current command in editor
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey '^e' edit-command-line

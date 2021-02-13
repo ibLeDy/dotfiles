@@ -51,7 +51,7 @@ source "$HOME/.cargo/env"
 # export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 
 # Default programs:
-export EDITOR="subl"
+export VISUAL="vim"
 export TERMINAL="alacritty"
 export BROWSER="google-chrome"
 
