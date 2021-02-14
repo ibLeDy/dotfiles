@@ -1,10 +1,12 @@
 [user]
+	name = Iago Alonso
 	email = deejaynof@gmail.com
-	name = bLeDy
 	signingkey = FE7EF85DA8A04AF5
 [core]
 	editor = subl -w
 [commit]
 	gpgsign = true
+[tag]
+    gpgsign = true
 [diff]
 	wsErrorHighlight = all
