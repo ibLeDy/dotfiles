@@ -11,17 +11,20 @@ DISABLE_AUTO_UPDATE="true"
 ZSH_HIGHLIGHT_MAXLENGTH=300
 
 plugins=(
+    docker
+    docker-compose
     git
     colorize
     colored-man-pages
     compleat
+    kubectl
     safe-paste
     virtualenvwrapper
     zsh-completions
     zsh-syntax-highlighting
 )
 
-# Reload the completion for `zsh-completions`
+# Reload tab completion
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
@@ -68,3 +71,7 @@ fzf-history-widget() {
 }
 zle     -N   fzf-history-widget
 bindkey '^R' fzf-history-widget
+
+# Enable stacking for docker's tab completion
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
