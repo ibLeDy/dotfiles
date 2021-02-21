@@ -6,7 +6,5 @@
 	editor = subl -w
 [commit]
 	gpgsign = true
-[tag]
-    gpgsign = true
 [diff]
 	wsErrorHighlight = all
