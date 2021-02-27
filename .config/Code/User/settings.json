@@ -201,4 +201,5 @@
         "--style=google"
     ],
     "workbench.list.horizontalScrolling": true,
+    "workbench.list.openMode": "doubleClick",
 }
