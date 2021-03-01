@@ -185,7 +185,6 @@
         88,
         120,
     ],
-    "workbench.editor.wrapTabs": false,
     "workbench.editor.decorations.badges": true,
     "workbench.editor.decorations.colors": true,
     "workbench.editor.enablePreviewFromCodeNavigation": true,
@@ -203,4 +202,5 @@
     "workbench.list.horizontalScrolling": true,
     "workbench.tree.expandMode": "doubleClick",
     "workbench.sash.size": 8,
+    "editor.selectionClipboard": false,
 }
