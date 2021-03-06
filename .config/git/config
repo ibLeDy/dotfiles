@@ -8,3 +8,5 @@
 	gpgsign = true
 [diff]
 	wsErrorHighlight = all
+[feature]
+    manyFiles = 1
