@@ -64,3 +64,6 @@ fi
 if ! [ -d "$HOME/.cache/zsh" ] ; then
     mkdir "$HOME/.cache/zsh"
 fi
+
+# Set formatting for `time` command
+export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
