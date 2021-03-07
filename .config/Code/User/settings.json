@@ -23,7 +23,6 @@
     "editor.detectIndentation": true,
     "editor.dragAndDrop": false,
     "editor.emptySelectionClipboard": true,
-    "editor.find.addExtraSpaceOnTop": false,
     "editor.find.seedSearchStringFromSelection": true,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
@@ -194,7 +193,6 @@
     "workbench.editor.enablePreviewFromCodeNavigation": true,
     "oneDarkPro.markdownStyle": false,
     "python.analysis.typeCheckingMode": "basic",
-    "editor.cursorStyle": "block",
     "editor.occurrencesHighlight": false,
     "bracket-pair-colorizer-2.showBracketsInGutter": true,
     "bracket-pair-colorizer-2.showBracketsInRuler": true,
@@ -207,4 +205,5 @@
     "workbench.tree.expandMode": "doubleClick",
     "workbench.sash.size": 6,
     "editor.selectionClipboard": false,
+    "search.smartCase": true,
 }
