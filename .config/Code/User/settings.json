@@ -155,11 +155,16 @@
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.pinnedTabSizing": "shrink",
     "workbench.editor.tabCloseButton": "right",
-    "workbench.editorAssociations": [],
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
     "workbench.enableExperiments": false,
     "workbench.iconTheme": "vscode-icons",
     "workbench.list.smoothScrolling": true,
-    "workbench.startupEditor": "newUntitledFile",
+    "workbench.startupEditor": "readme",
     "workbench.statusBar.visible": true,
     "python.analysis.memory.keepLibraryAst": true,
     "workbench.preferredDarkColorTheme": "Sublime Material Theme - Dark",
@@ -170,7 +175,6 @@
     "xmlTools.enableXmlTreeView": false,
     "workbench.colorCustomizations": {
         "editorCursor.foreground": "#0051ff",
-        "sash.hoverBorder": "#4B8BBE",
     },
     "editor.fontSize": 13,
     "window.zoomLevel": 0,
@@ -201,6 +205,6 @@
     ],
     "workbench.list.horizontalScrolling": true,
     "workbench.tree.expandMode": "doubleClick",
-    "workbench.sash.size": 8,
+    "workbench.sash.size": 6,
     "editor.selectionClipboard": false,
 }
