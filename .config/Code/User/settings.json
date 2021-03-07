@@ -162,7 +162,7 @@
         }
     ],
     "workbench.enableExperiments": false,
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.list.smoothScrolling": true,
     "workbench.startupEditor": "readme",
     "workbench.statusBar.visible": true,
