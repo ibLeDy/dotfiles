@@ -44,8 +44,8 @@ source "$HOME/.cargo/env"
 # export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 
 # Ruby
-# export PATH="$HOME/gems/bin:$PATH"
-# export GEM_HOME="$HOME/gems"
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
 
 # Go
 # export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
