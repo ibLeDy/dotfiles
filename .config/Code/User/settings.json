@@ -128,7 +128,6 @@
         "--ignore-missing-imports",
         "--disable-error-code=var-annotated"
     ],
-    "python.pythonPath": "/usr/bin/python3",
     "python.showStartPage": false,
     "python.venvPath": "~/.virtualenvs",
     "scm.alwaysShowRepositories": true,
@@ -206,4 +205,8 @@
     "workbench.sash.size": 6,
     "editor.selectionClipboard": false,
     "search.smartCase": true,
+    "settingsSync.ignoredSettings": [
+        "python.pythonPath"
+    ],
+    "python.pythonPath": "python3",
 }
