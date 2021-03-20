@@ -14,23 +14,24 @@ cp $DOTFILES_HOME/.ssh/config ~/.ssh/
 
 # $XDG_CONFIG_HOME
 mkdir -p ~/.config/{alacritty,Code/User,dash-to-panel,flameshot,git,gnome-extensions-sync,htop,i3,i3blocks,mpv,pulse,sublime-text-3/Packages/User,tmux,vim,zsh}
-cp $DOTFILES_CONFIG_HOME/.config/aliasrc ~/.config
-cp $DOTFILES_CONFIG_HOME/.config/alacritty/alacritty.yml ~/.config/alacritty/
-cp $DOTFILES_CONFIG_HOME/.config/Code/User/{keybindings.json,settings.json} ~/.config/Code/User/
-cp $DOTFILES_CONFIG_HOME/.config/dash-to-panel/dash-to-panel-settings ~/.config/dash-to-panel/
-cp $DOTFILES_CONFIG_HOME/.config/flameshot/flameshot.conf ~/.config/flameshot/
-cp $DOTFILES_CONFIG_HOME/.config/git/config ~/.config/git/
-cp $DOTFILES_CONFIG_HOME/.config/gnome-extensions-sync/extensions.json ~/.config/gnome-extensions-sync/
-cp $DOTFILES_CONFIG_HOME/.config/htop/htoprc ~/.config/htop/
-cp $DOTFILES_CONFIG_HOME/.config/i3/config ~/.config/i3/
-cp $DOTFILES_CONFIG_HOME/.config/i3blocks/config ~/.config/i3blocks/
-cp $DOTFILES_CONFIG_HOME/.config/mpv/mpv.conf ~/.config/mpv/
-cp $DOTFILES_CONFIG_HOME/.config/pulse/daemon.conf ~/.config/pulse/
-cp $DOTFILES_CONFIG_HOME/.config/sublime-text-3/Packages/User/{"Default (Linux).sublime-keymap","Package Control.sublime-settings",Preferences.sublime-settings} ~/.config/sublime-text-3/Packages/User/
-cp .config/tmux/tmux.conf ~/.config/tmux/
-cp .config/vim/vimrc ~/.config/vim/
-cp .config/zsh/.{p10k.zsh,zshrc} ~/.config/zsh/
+cp $DOTFILES_CONFIG_HOME/aliasrc ~/.config
+cp $DOTFILES_CONFIG_HOME/alacritty/alacritty.yml ~/.config/alacritty/
+cp $DOTFILES_CONFIG_HOME/Code/User/{keybindings.json,settings.json} ~/.config/Code/User/
+cp $DOTFILES_CONFIG_HOME/dash-to-panel/dash-to-panel-settings ~/.config/dash-to-panel/
+cp $DOTFILES_CONFIG_HOME/flameshot/flameshot.conf ~/.config/flameshot/
+cp $DOTFILES_CONFIG_HOME/git/config ~/.config/git/
+cp $DOTFILES_CONFIG_HOME/gnome-extensions-sync/extensions.json ~/.config/gnome-extensions-sync/
+cp $DOTFILES_CONFIG_HOME/htop/htoprc ~/.config/htop/
+cp $DOTFILES_CONFIG_HOME/i3/config ~/.config/i3/
+cp $DOTFILES_CONFIG_HOME/i3blocks/config ~/.config/i3blocks/
+cp $DOTFILES_CONFIG_HOME/mpv/mpv.conf ~/.config/mpv/
+cp $DOTFILES_CONFIG_HOME/pulse/daemon.conf ~/.config/pulse/
+cp $DOTFILES_CONFIG_HOME/sublime-text-3/Packages/User/{"Default (Linux).sublime-keymap","Package Control.sublime-settings",Preferences.sublime-settings} ~/.config/sublime-text-3/Packages/User/
+cp $DOTFILES_CONFIG_HOME/tmux/tmux.conf ~/.config/tmux/
+cp $DOTFILES_CONFIG_HOME/vim/vimrc ~/.config/vim/
+cp $DOTFILES_CONFIG_HOME/zsh/.{p10k.zsh,zshrc} ~/.config/zsh/
 
 # $HOME/.local/bin
 # mkdir -p ~/.local/bin
 # cp .local/bin/{countdown,extramaus,fix-volume,mute-spotify-ads} ~/.local/bin/
+cp $DOTFILES_LOCAL_BIN/fix-screen-tearing ~/.local/bin/fix-screen-tearing
