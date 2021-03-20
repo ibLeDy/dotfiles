@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 DOTFILES_HOME="$HOME/workspace/dotfiles"
 DOTFILES_CONFIG_HOME="$DOTFILES_HOME/.config"

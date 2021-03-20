@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 pactl set-card-profile "alsa_card.usb-Corsa_ir_Components_Inc._Corsair_HS60_Surround_Adapter_v0.1-00" "output:analog-stereo"
 sleep 1
 pactl set-card-profile "alsa_card.usb-Corsa_ir_Components_Inc._Corsair_HS60_Surround_Adapter_v0.1-00" "output:iec958-stereo"
