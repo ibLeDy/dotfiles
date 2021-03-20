@@ -8,6 +8,7 @@ DOTFILES_USR_SHARE="$DOTFILES_HOME/usr/share"
 
 # $HOME
 cp $DOTFILES_HOME/.asoundrc ~/
+cp $DOTFILES_HOME/.imwheelrc ~/
 cp $DOTFILES_HOME/.profile ~/
 cp $DOTFILES_HOME/.TilingAssistantExtension.layouts.json ~/
 cp $DOTFILES_HOME/.ssh/config ~/.ssh/
