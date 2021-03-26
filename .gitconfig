@@ -1,6 +1,6 @@
 [user]
-    email = deejaynof@gmail.com
     name = Iago Alonso
+    email = deejaynof@gmail.com
     signingkey = FE7EF85DA8A04AF5
 [core]
     editor = subl -w
@@ -8,3 +8,5 @@
     gpgsign = true
 [diff]
     wsErrorHighlight = all
+[feature]
+    manyFiles = 1
