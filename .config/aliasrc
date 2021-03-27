@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim"
@@ -19,4 +19,5 @@ alias \
 alias \
     open="xdg-open" \
     ytdl="youtube-dl --merge-output-format mkv" \
-    lbrynet="/opt/LBRY/resources/static/daemon/lbrynet"
+    lbrynet="/opt/LBRY/resources/static/daemon/lbrynet" \
+    tree="tree -C -a -I '.git|.venv|*cache*|target'"
