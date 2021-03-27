@@ -16,6 +16,7 @@ cp ~/.TilingAssistantExtension.layouts.json $DOTFILES_HOME
 
 # $XDG_CONFIG_HOME
 mkdir -p $DOTFILES_CONFIG_HOME/{alacritty,Code/User,dash-to-panel,flameshot,git,gnome-extensions-sync,htop,i3,i3blocks,mpv,pulse,sublime-text-3/Packages/User,tmux,vim,zsh}
+cp ~/.config/aliasrc $DOTFILES_CONFIG_HOME
 cp ~/.config/alacritty/alacritty.yml $DOTFILES_CONFIG_HOME/alacritty/
 cp ~/.config/Code/User/{keybindings.json,settings.json} $DOTFILES_CONFIG_HOME/Code/User/
 cp ~/.config/dash-to-panel/dash-to-panel-settings $DOTFILES_CONFIG_HOME/dash-to-panel/
