@@ -20,7 +20,7 @@ cp $DOTFILES_CONFIG_HOME/alacritty/alacritty.yml ~/.config/alacritty/
 cp $DOTFILES_CONFIG_HOME/Code/User/{keybindings.json,settings.json} ~/.config/Code/User/
 cp $DOTFILES_CONFIG_HOME/dash-to-panel/dash-to-panel-settings ~/.config/dash-to-panel/
 cp $DOTFILES_CONFIG_HOME/flameshot/flameshot.conf ~/.config/flameshot/
-cp $DOTFILES_CONFIG_HOME/git/config ~/.config/git/
+cp $DOTFILES_CONFIG_HOME/git/{config,ignore} ~/.config/git/
 cp $DOTFILES_CONFIG_HOME/gnome-extensions-sync/extensions.json ~/.config/gnome-extensions-sync/
 cp $DOTFILES_CONFIG_HOME/htop/htoprc ~/.config/htop/
 cp $DOTFILES_CONFIG_HOME/i3/config ~/.config/i3/
