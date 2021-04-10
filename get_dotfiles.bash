@@ -3,6 +3,7 @@
 DOTFILES_HOME="$HOME/workspace/dotfiles"
 DOTFILES_CONFIG_HOME="$DOTFILES_HOME/.config"
 DOTFILES_LOCAL_BIN="$DOTFILES_HOME/.local/bin"
+DOTFILES_LOCAL_SHARE="$DOTFILES_HOME/.local/share"
 DOTFILES_ETC="$DOTFILES_HOME/etc"
 DOTFILES_USR_SHARE="$DOTFILES_HOME/usr/share"
 
@@ -12,7 +13,6 @@ cp ~/.asoundrc $DOTFILES_HOME
 cp ~/.imwheelrc $DOTFILES_HOME
 cp ~/.pdbrc $DOTFILES_HOME
 cp ~/.profile $DOTFILES_HOME
-cp ~/.TilingAssistantExtension.layouts.json $DOTFILES_HOME
 
 # $XDG_CONFIG_HOME
 mkdir -p $DOTFILES_CONFIG_HOME/{alacritty,Code/User,dash-to-panel,flameshot,git,gnome-extensions-sync,htop,i3,i3blocks,mpv,pulse,sublime-text-3/Packages/User,tmux,vim,zsh}
@@ -37,3 +37,7 @@ cp ~/.config/zsh/.{p10k.zsh,zshrc} $DOTFILES_CONFIG_HOME/zsh/
 mkdir -p $DOTFILES_LOCAL_BIN
 # cp ~/.local/bin/{countdown,extramaus,fix-volume,mute-spotify-ads} $DOTFILES_LOCAL_BIN
 cp ~/.local/bin/fix-screen-tearing $DOTFILES_LOCAL_BIN
+
+# $HOME/.local/share
+mkdir -p $DOTFILES_LOCAL_SHARE/gnome-shell/extensions/tiling-assistant@leleat-on-github
+cp ~/.local/share/gnome-shell/extensions/tiling-assistant@leleat-on-github/.layouts.json $DOTFILES_LOCAL_SHARE/gnome-shell/extensions/tiling-assistant@leleat-on-github
