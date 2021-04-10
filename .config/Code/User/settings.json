@@ -215,4 +215,11 @@
     "html.format.endWithNewline": true,
     "html.format.indentInnerHtml": true,
     "html.format.templating": true,
+    "files.associations": {
+        "**/*.html": "html",
+        // "**/templates/**/*.html": "django-html",
+        // "**/templates/**/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    },
+    "emmet.includeLanguages": {"django-html": "html"},
 }
