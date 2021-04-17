@@ -30,6 +30,9 @@ autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
+# Accept current suggestion with ctrl + space
+bindkey '^ ' autosuggest-accept
+
 # Don't cd to directory of same name as a non-found executable
 unsetopt AUTO_CD
 
