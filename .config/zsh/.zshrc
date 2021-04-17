@@ -20,6 +20,7 @@ plugins=(
     kubectl
     safe-paste
     virtualenvwrapper
+    zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
 )
