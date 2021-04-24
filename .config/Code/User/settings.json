@@ -230,4 +230,6 @@
     "html-css-class-completion.enableEmmetSupport": true,
     "html.format.templating": true,
     "html.format.indentHandlebars": true,
+    "docker.showStartPage": false,
+    "workbench.productIconTheme": "fluent-icons",
 }
