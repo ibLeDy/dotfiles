@@ -9,16 +9,22 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.tabSize": 2,
+        "editor.formatOnSave": true,
     },
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features",
         "editor.tabSize": 2,
+        "editor.formatOnSave": true,
     },
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features",
         "editor.tabSize": 2,
+        "editor.formatOnSave": true,
     },
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.formatOnSave": true,
+    },
     "debug.console.fontSize": 13,
     "discord.lowerDetailsNoWorkspaceFound": "{empty}",
     "discord.lowerDetailsIdling": "{empty}",
@@ -206,12 +212,10 @@
     "settingsSync.ignoredSettings": [
         "python.pythonPath"
     ],
-    "auto-close-tag.fullMode": true,
     "editor.linkedEditing": true,
     "workbench.sash.hoverDelay": 0,
     "workbench.hover.delay": 250,
     "python.pythonPath": "python3",
-    "prettier.printWidth": 88,
     "html.format.endWithNewline": true,
     "html.format.indentInnerHtml": true,
     "files.associations": {
@@ -232,4 +236,8 @@
     "html.format.indentHandlebars": true,
     "docker.showStartPage": false,
     "workbench.productIconTheme": "fluent-icons",
+    "prettier.vueIndentScriptAndStyle": true,
+    "html.format.wrapAttributes": "aligned-multiple",
+    "redhat.telemetry.enabled": false,
+    "explorer.sortOrder": "filesFirst",
 }
