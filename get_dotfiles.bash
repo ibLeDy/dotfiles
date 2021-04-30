@@ -3,7 +3,6 @@
 DOTFILES_HOME="$HOME/workspace/repos/ibLeDy/dotfiles"
 DOTFILES_CONFIG_HOME="$DOTFILES_HOME/.config"
 DOTFILES_LOCAL_BIN="$DOTFILES_HOME/.local/bin"
-DOTFILES_LOCAL_SHARE="$DOTFILES_HOME/.local/share"
 DOTFILES_ETC="$DOTFILES_HOME/etc"
 DOTFILES_USR_SHARE="$DOTFILES_HOME/usr/share"
 
@@ -15,7 +14,7 @@ cp ~/.pdbrc $DOTFILES_HOME
 cp ~/.profile $DOTFILES_HOME
 
 # $XDG_CONFIG_HOME
-mkdir -p $DOTFILES_CONFIG_HOME/{alacritty,Code/User,dash-to-panel,flameshot,git,gnome-extensions-sync,htop,i3,i3blocks,mpv,pulse,sublime-text-3/Packages/User,tmux,vim,zsh}
+mkdir -p $DOTFILES_CONFIG_HOME/{alacritty,Code/User,dash-to-panel,flameshot,git,gnome-extensions-sync,htop,i3,i3blocks,mpv,pulse,sublime-text-3/Packages/User,tmux,tiling-assistant,vim,zsh}
 cp ~/.config/aliasrc $DOTFILES_CONFIG_HOME
 cp ~/.config/alacritty/alacritty.yml $DOTFILES_CONFIG_HOME/alacritty/
 cp ~/.config/Code/User/{keybindings.json,settings.json} $DOTFILES_CONFIG_HOME/Code/User/
@@ -30,6 +29,7 @@ cp ~/.config/mpv/mpv.conf $DOTFILES_CONFIG_HOME/mpv/
 cp ~/.config/pulse/daemon.conf $DOTFILES_CONFIG_HOME/pulse/
 cp ~/.config/sublime-text-3/Packages/User/{"Default (Linux).sublime-keymap","Package Control.sublime-settings",Preferences.sublime-settings} $DOTFILES_CONFIG_HOME/sublime-text-3/Packages/User/
 cp ~/.config/tmux/tmux.conf $DOTFILES_CONFIG_HOME/tmux/
+cp ~/.config/tiling-assistant/layouts.json $DOTFILES_CONFIG_HOME/tiling-assistant/
 cp ~/.config/vim/vimrc $DOTFILES_CONFIG_HOME/vim/
 cp ~/.config/zsh/.{p10k.zsh,zshrc} $DOTFILES_CONFIG_HOME/zsh/
 
@@ -37,7 +37,3 @@ cp ~/.config/zsh/.{p10k.zsh,zshrc} $DOTFILES_CONFIG_HOME/zsh/
 mkdir -p $DOTFILES_LOCAL_BIN
 # cp ~/.local/bin/{countdown,extramaus,fix-volume,mute-spotify-ads} $DOTFILES_LOCAL_BIN
 cp ~/.local/bin/fix-screen-tearing $DOTFILES_LOCAL_BIN
-
-# $HOME/.local/share
-mkdir -p $DOTFILES_LOCAL_SHARE/gnome-shell/extensions/tiling-assistant@leleat-on-github
-cp ~/.local/share/gnome-shell/extensions/tiling-assistant@leleat-on-github/.layouts.json $DOTFILES_LOCAL_SHARE/gnome-shell/extensions/tiling-assistant@leleat-on-github
