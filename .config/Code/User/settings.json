@@ -42,7 +42,6 @@
     "editor.find.seedSearchStringFromSelection": true,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": false,
-    "editor.minimap.showSlider": "always",
     "editor.mouseWheelScrollSensitivity": 1,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.quickSuggestionsDelay": 50,
@@ -220,24 +219,33 @@
     "html.format.indentInnerHtml": true,
     "files.associations": {
         "**/*.html": "html",
-        // "**/templates/**/*.html": "html, django-html",
-        // "**/templates/**/*": "django-txt",
+        "**/templates/**/*.html": "html, django-html",
+        "**/templates/**/*": "django-txt",
         "**/requirements{/**,*}.{txt,in}": "pip-requirements"
     },
     "emmet.includeLanguages": {
         "django-html": "html"
     },
-    "[django-html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
+    "beautify.language": {
+        "html": [
+            "htm",
+            "html",
+            "django-html"
+        ]
     },
     "django.i18n": false,
     "html-css-class-completion.enableEmmetSupport": true,
     "html.format.templating": true,
-    "html.format.indentHandlebars": true,
     "docker.showStartPage": false,
     "workbench.productIconTheme": "fluent-icons",
     "prettier.vueIndentScriptAndStyle": true,
     "html.format.wrapAttributes": "aligned-multiple",
     "redhat.telemetry.enabled": false,
     "explorer.sortOrder": "filesFirst",
+    "editor.minimap.showSlider": "always",
+    "html.format.indentHandlebars": true,
+    "[django-html]": {
+        "editor.defaultFormatter": "HookyQR.beautify",
+        "editor.formatOnSave": true
+    },
 }
