@@ -37,7 +37,7 @@ mkdir -p ~/.local/bin
 # cp .local/bin/{countdown,extramaus,fix-volume,mute-spotify-ads} ~/.local/bin/
 cp $DOTFILES_LOCAL_BIN/fix-screen-tearing ~/.local/bin/fix-screen-tearing
 
-# $HOME/.local/bin
+# $HOME/.local/share
 mkdir -p ~/.local/share/zellij/{layouts,plugins}
 cp $DOTFILES_LOCAL_SHARE/zellij/layouts/{default,strider}.yaml ~/.local/share/zellij/layouts/
 cp $DOTFILES_LOCAL_SHARE/zellij/plugins/* ~/.local/share/zellij/plugins/
