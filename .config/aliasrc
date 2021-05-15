@@ -23,6 +23,4 @@ alias \
 # Shorter commands
 alias \
     open="xdg-open" \
-    ytdl="youtube-dl --merge-output-format mkv" \
-    lbrynet="/opt/LBRY/resources/static/daemon/lbrynet" \
     tree="tree --dirsfirst -C -a -I '.git|.venv|*cache*|target'"
