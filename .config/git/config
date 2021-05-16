@@ -1,20 +1,20 @@
 [user]
-	name = Iago Alonso
-	email = deejaynof@gmail.com
-	signingkey = FE7EF85DA8A04AF5
+    name = Iago Alonso
+    email = deejaynof@gmail.com
+    signingkey = FE7EF85DA8A04AF5
 [core]
-	editor = subl -w
-	pager = diff-so-fancy | less --tabs=4 -RFX
+    editor = subl -w
+    pager = diff-so-fancy | less --tabs=4 -RFX
 [commit]
-	gpgsign = true
+    gpgsign = true
 [diff]
-	wsErrorHighlight = all
+    wsErrorHighlight = all
 [feature]
     manyFiles = 1
 [interactive]
-	diffFilter = diff-so-fancy --patch
+    diffFilter = diff-so-fancy --patch
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
