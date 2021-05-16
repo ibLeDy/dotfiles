@@ -8,8 +8,8 @@ DOTFILES_LOCAL_SHARE="$DOTFILES_HOME/.local/share"
 # $HOME
 cp $DOTFILES_HOME/.asoundrc ~/
 cp $DOTFILES_HOME/.imwheelrc ~/
+cp $DOTFILES_HOME/.pdbrc ~/
 cp $DOTFILES_HOME/.profile ~/
-cp $DOTFILES_HOME/.ssh/config ~/.ssh/
 
 # $XDG_CONFIG_HOME
 mkdir -p ~/.config/{alacritty,Code/User,dash-to-panel,flameshot,git,gnome-extensions-sync,htop,i3,i3blocks,mpv,pulse,sublime-text-3/Packages/User,tmux,tiling-assistant,vim,zellij,zsh}

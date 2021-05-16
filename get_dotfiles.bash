@@ -6,7 +6,6 @@ DOTFILES_LOCAL_BIN="$DOTFILES_HOME/.local/bin"
 DOTFILES_LOCAL_SHARE="$DOTFILES_HOME/.local/share"
 
 # $HOME
-mkdir -p $DOTFILES_HOME/.ssh
 cp ~/.asoundrc $DOTFILES_HOME
 cp ~/.imwheelrc $DOTFILES_HOME
 cp ~/.pdbrc $DOTFILES_HOME
