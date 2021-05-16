@@ -1,7 +1,7 @@
 {
     "[python]": {
         "editor.defaultFormatter": "ms-python.python",
-        "editor.semanticHighlighting.enabled": false,
+        // "editor.semanticHighlighting.enabled": false,
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features",
@@ -147,27 +147,26 @@
     "terminal.integrated.fontFamily": "UbuntuMono Nerd Font",
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.enableBell": true,
-
     "terminal.integrated.profiles.windows": {
         "bash": {
             "source": "Git Bash",
-            "icon": "terminal-bash",
+            "icon": "terminal-bash"
         }
     },
     "terminal.integrated.defaultProfile.windows": "bash",
     "terminal.integrated.profiles.linux": {
         "bash": {
             "path": "/usr/bin/bash",
-            "icon": "terminal-bash",
+            "icon": "terminal-bash"
         },
         "zsh": {
             "path": "/usr/bin/zsh",
-            "icon": "terminal-linux",
+            "icon": "terminal-linux"
         },
         "tmux": {
             "path": "/usr/local/bin/tmux",
             "icon": "terminal-tmux"
-        },
+        }
     },
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.profiles.osx": {
@@ -177,12 +176,12 @@
         },
         "zsh": {
             "path": "/bin/zsh",
-            "icon": "terminal-linux",
+            "icon": "terminal-linux"
         },
         "tmux": {
             "path": "tmux",
             "icon": "terminal-tmux"
-        },
+        }
     },
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
@@ -287,4 +286,7 @@
         "editor.defaultFormatter": "HookyQR.beautify",
         "editor.formatOnSave": true
     },
+    "sonarlint.disableTelemetry": true,
+    "java.home": "C:\\Users\\bLeDy\\AppData\\Local\\Programs\\AdoptOpenJDK\\jdk-11.0.11.9-hotspot",
+    "markdown.preview.scrollEditorWithPreview": false,
 }
