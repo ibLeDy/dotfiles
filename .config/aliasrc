@@ -3,6 +3,9 @@
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim"
 
+# Use podman for docker if present
+[ -x "$(command -v podman)" ] && alias docker="podman"
+
 # Friendlier copy commands for xclip if present
 [ -x "$(command -v xclip)" ] && alias \
     pbcopy="xclip -selection c" \
