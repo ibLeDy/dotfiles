@@ -25,7 +25,7 @@ cp $DOTFILES_CONFIG_HOME/i3/config ~/.config/i3/
 cp $DOTFILES_CONFIG_HOME/i3blocks/config ~/.config/i3blocks/
 cp $DOTFILES_CONFIG_HOME/mpv/mpv.conf ~/.config/mpv/
 cp $DOTFILES_CONFIG_HOME/nano/nanorc ~/.config/nano/
-cp $DOTFILES_CONFIG_HOME/pulse/daemon.conf ~/.config/pulse/
+cp $DOTFILES_CONFIG_HOME/pulse/{daemon.conf,default.pa} ~/.config/pulse/
 cp $DOTFILES_CONFIG_HOME/sublime-text-3/Packages/User/{"Default (Linux).sublime-keymap","Package Control.sublime-settings",Preferences.sublime-settings} ~/.config/sublime-text-3/Packages/User/
 cp $DOTFILES_CONFIG_HOME/tmux/tmux.conf ~/.config/tmux/
 cp $DOTFILES_CONFIG_HOME/tiling-assistant/layouts.json ~/.config/tiling-assistant/
