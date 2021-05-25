@@ -1,0 +1,35 @@
+======
+# everything in parentheses
+regexp=\(.+?\)
+colours=cyan
+count=more
+======
+# everything in ``
+regexp=\`.+?\`
+colours=bold yellow
+count=more
+======
+# name of process and pid
+regexp=([\w/\.\-]+)(\[\d+?\])
+colours=bold blue, bold red
+count=more
+# INFO lines
+======
+regexp=INFO
+colours=bold green
+count=more
+# WARNING lines
+======
+regexp=WARNING
+colours=bold yellow
+count=more
+# ERROR lines
+======
+regexp=ERROR
+colours=bold red blink
+count=more
+======
+regexp=odoo\.(.*?)\:
+colours=bold cyan underline
+count=more
+
