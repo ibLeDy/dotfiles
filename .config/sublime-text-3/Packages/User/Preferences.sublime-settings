@@ -176,4 +176,5 @@
     "word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
     "word_wrap": false,
     "wrap_width": 0,
+    "hardware_acceleration": "none",
 }
