@@ -25,7 +25,7 @@ mkdir -p ~/.local/bin
 cp $DOTFILES_LOCAL_BIN/countdown ~/.local/bin/
 
 # /etc
-cp $DOTFILES_ETC/dhcpcd.conf /etc
+cp $DOTFILES_ETC/dhcpcd.conf /etc/
 
 # /usr/share
 mkdir -p /usr/share/grc

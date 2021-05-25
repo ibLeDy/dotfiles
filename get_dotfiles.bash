@@ -25,6 +25,7 @@ mkdir -p $DOTFILES_LOCAL_BIN
 cp ~/.local/bin/countdown $DOTFILES_LOCAL_BIN
 
 # /etc
+mkdir -p $DOTFILES_ETC
 cp /etc/dhcpcd.conf $DOTFILES_ETC
 
 # /usr/share
