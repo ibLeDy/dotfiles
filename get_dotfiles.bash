@@ -15,11 +15,13 @@ cp ~/.tmux.conf $DOTFILES_HOME
 
 # $XDG_CONFIG_HOME
 mkdir -p $DOTFILES_CONFIG_HOME/{git,htop,vim,zellij}
+mkdir -p $DOTFILES_CONFIG_HOME/systemd/user
 cp ~/.config/aliasrc $DOTFILES_CONFIG_HOME
 cp ~/.config/git/{config,ignore} $DOTFILES_CONFIG_HOME/git/
 cp ~/.config/htop/htoprc $DOTFILES_CONFIG_HOME/htop/
 cp ~/.config/vim/vimrc $DOTFILES_CONFIG_HOME/vim/
 cp ~/.config/zellij/config.yaml $DOTFILES_CONFIG_HOME/zellij/
+cp ~/.config/systemd/user/docker.service $DOTFILES_CONFIG_HOME/systemd/user/
 
 # $HOME/.local/bin
 mkdir -p $DOTFILES_LOCAL_BIN
