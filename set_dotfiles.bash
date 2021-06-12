@@ -14,11 +14,12 @@ cp $DOTFILES_HOME/.profile ~/
 cp $DOTFILES_HOME/.tmux.conf ~/
 
 # $XDG_CONFIG_HOME
-mkdir -p ~/.config/{git,htop,vim}
+mkdir -p ~/.config/{git,htop,vim,zellij}
 cp $DOTFILES_CONFIG_HOME/aliasrc ~/.config
 cp $DOTFILES_CONFIG_HOME/git/{config,ignore} ~/.config/git/
 cp $DOTFILES_CONFIG_HOME/htop/htoprc ~/.config/htop/
 cp $DOTFILES_CONFIG_HOME/vim/vimrc ~/.config/vim/
+cp $DOTFILES_CONFIG_HOME/zellij/config.yaml ~/.config/zellij/
 
 # $HOME/.local/bin
 mkdir -p ~/.local/bin
@@ -30,4 +31,3 @@ cp $DOTFILES_ETC/dhcpcd.conf /etc/
 # /usr/share
 mkdir -p /usr/share/grc
 cp $DOTFILES_USR_SHARE/grc/conf.odoo /usr/share/grc/
-
