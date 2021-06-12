@@ -1,7 +1,7 @@
 [user]
-	name = Iago Alonso
-	email = deejaynof@gmail.com
+    name = Iago Alonso
+    email = deejaynof@gmail.com
 [diff]
-	wsErrorHighlight = all
+    wsErrorHighlight = all
 [feature]
     manyFiles = 1
