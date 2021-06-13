@@ -51,7 +51,7 @@ export BROWSER="chromium-browser"
 
 # Create zsh's cache folder if not present
 if ! [ -d "$HOME/.cache/zsh" ] ; then
-    mkdir "$HOME/.cache/zsh"
+    mkdir -p "$HOME/.cache/zsh"
 fi
 
 # Set formatting for `time` command
