@@ -4,7 +4,6 @@ DOTFILES_HOME="$HOME/workspace/repos/dotfiles"
 DOTFILES_CONFIG_HOME="$DOTFILES_HOME/.config"
 DOTFILES_LOCAL_BIN="$DOTFILES_HOME/.local/bin"
 DOTFILES_ETC="$DOTFILES_HOME/etc"
-DOTFILES_USR_SHARE="$DOTFILES_HOME/usr/share"
 
 # $HOME
 cp $DOTFILES_HOME/.bashrc ~/
@@ -25,7 +24,3 @@ cp $DOTFILES_CONFIG_HOME/zellij/config.yaml ~/.config/zellij/
 # $HOME/.local/bin
 mkdir -p ~/.local/bin
 cp $DOTFILES_LOCAL_BIN/countdown ~/.local/bin/
-
-# /usr/share
-mkdir -p /usr/share/grc
-cp $DOTFILES_USR_SHARE/grc/conf.odoo /usr/share/grc/

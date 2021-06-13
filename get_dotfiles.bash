@@ -4,7 +4,6 @@ DOTFILES_HOME="$HOME/workspace/repos/dotfiles"
 DOTFILES_CONFIG_HOME="$DOTFILES_HOME/.config"
 DOTFILES_LOCAL_BIN="$DOTFILES_HOME/.local/bin"
 DOTFILES_ETC="$DOTFILES_HOME/etc"
-DOTFILES_USR_SHARE="$DOTFILES_HOME/usr/share"
 
 # $HOME
 cp ~/.bashrc $DOTFILES_HOME
@@ -29,7 +28,3 @@ cp ~/.local/bin/countdown $DOTFILES_LOCAL_BIN
 # /etc
 mkdir -p $DOTFILES_ETC
 cp /etc/dhcpcd.conf $DOTFILES_ETC
-
-# /usr/share
-mkdir -p $DOTFILES_USR_SHARE/grc
-cp /usr/share/grc/conf.odoo $DOTFILES_USR_SHARE/grc/
