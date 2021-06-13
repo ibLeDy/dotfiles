@@ -21,14 +21,10 @@ cp $DOTFILES_CONFIG_HOME/git/{config,ignore} ~/.config/git/
 cp $DOTFILES_CONFIG_HOME/htop/htoprc ~/.config/htop/
 cp $DOTFILES_CONFIG_HOME/vim/vimrc ~/.config/vim/
 cp $DOTFILES_CONFIG_HOME/zellij/config.yaml ~/.config/zellij/
-cp $DOTFILES_CONFIG_HOME/systemd/user/docker.service ~/.config/systemd/user/
 
 # $HOME/.local/bin
 mkdir -p ~/.local/bin
 cp $DOTFILES_LOCAL_BIN/countdown ~/.local/bin/
-
-# /etc
-cp $DOTFILES_ETC/dhcpcd.conf /etc/
 
 # /usr/share
 mkdir -p /usr/share/grc

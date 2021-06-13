@@ -21,7 +21,6 @@ cp ~/.config/git/{config,ignore} $DOTFILES_CONFIG_HOME/git/
 cp ~/.config/htop/htoprc $DOTFILES_CONFIG_HOME/htop/
 cp ~/.config/vim/vimrc $DOTFILES_CONFIG_HOME/vim/
 cp ~/.config/zellij/config.yaml $DOTFILES_CONFIG_HOME/zellij/
-cp ~/.config/systemd/user/docker.service $DOTFILES_CONFIG_HOME/systemd/user/
 
 # $HOME/.local/bin
 mkdir -p $DOTFILES_LOCAL_BIN
