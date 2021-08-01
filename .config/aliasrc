@@ -3,6 +3,9 @@
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim"
 
+# Use bat for cat if present.
+[ -x "$(command -v bat)" ] && alias cat="bat"
+
 # Friendlier copy commands for xclip if present
 [ -x "$(command -v xclip)" ] && alias \
     pbcopy="xclip -selection c" \
