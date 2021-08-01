@@ -87,7 +87,6 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
-    "githubPullRequests.telemetry.enabled": false,
     "gitlens.blame.highlight.locations": [
         "overview",
         "gutter",
@@ -100,7 +99,7 @@
         "MD041": false,
         "MD007": false,
     },
-    "oneDarkPro.editorTheme": "vscode",
+    "oneDarkPro.editorTheme": "oneDarkPro",
     "partialDiff.enableTelemetry": false,
     "python.analysis.autoImportCompletions": false,
     "python.analysis.extraPaths": [
@@ -197,12 +196,9 @@
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.pinnedTabSizing": "shrink",
     "workbench.editor.tabCloseButton": "right",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
     "workbench.enableExperiments": false,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.list.smoothScrolling": true,
@@ -275,7 +271,7 @@
     "html-css-class-completion.enableEmmetSupport": true,
     "html.format.templating": true,
     "docker.showStartPage": false,
-    "workbench.productIconTheme": "fluent-icons",
+    "workbench.productIconTheme": "material-product-icons",
     "prettier.vueIndentScriptAndStyle": true,
     "html.format.wrapAttributes": "aligned-multiple",
     "redhat.telemetry.enabled": false,
@@ -283,10 +279,15 @@
     "editor.minimap.showSlider": "always",
     "html.format.indentHandlebars": true,
     "[django-html]": {
-        "editor.defaultFormatter": "HookyQR.beautify",
         "editor.formatOnSave": true
     },
-    "sonarlint.disableTelemetry": true,
-    "java.home": "C:\\Users\\bLeDy\\AppData\\Local\\Programs\\AdoptOpenJDK\\jdk-11.0.11.9-hotspot",
     "markdown.preview.scrollEditorWithPreview": false,
+    "yaml.customTags": [
+        "!encrypted/pkcs1-oaep scalar",
+        "!vault scalar"
+    ],
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
 }
