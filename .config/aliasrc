@@ -25,6 +25,9 @@ alias \
 # Use bat for cat if present.
 [ -x "$(command -v bat)" ] && alias cat="bat"
 
+# Use lsd for ls if present.
+[ -x "$(command -v lsd)" ] && alias ls="lsd"
+
 # Friendlier copy commands for xclip if present
 [ -x "$(command -v xclip)" ] && alias \
     pbcopy="xclip -selection c" \
