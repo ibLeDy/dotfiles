@@ -1,16 +1,5 @@
 #!/usr/bin/env bash
 
-# Use neovim for vim if present.
-[ -x "$(command -v nvim)" ] && alias vim="nvim"
-
-# Use bat for cat if present.
-[ -x "$(command -v bat)" ] && alias cat="bat"
-
-# Friendlier copy commands for xclip if present
-[ -x "$(command -v xclip)" ] && alias \
-    pbcopy="xclip -selection c" \
-    pbpaste="xclip -o -selection c"
-
 # Verbosity
 alias \
     cp="cp -iv" \
@@ -29,3 +18,14 @@ alias \
     ytdl="youtube-dl --merge-output-format mkv" \
     lbrynet="/opt/LBRY/resources/static/daemon/lbrynet" \
     tree="tree --dirsfirst -C -a -I '.git|.venv|*cache*|target'"
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim"
+
+# Use bat for cat if present.
+[ -x "$(command -v bat)" ] && alias cat="bat"
+
+# Friendlier copy commands for xclip if present
+[ -x "$(command -v xclip)" ] && alias \
+    pbcopy="xclip -selection c" \
+    pbpaste="xclip -o -selection c"
