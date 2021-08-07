@@ -99,7 +99,7 @@
         "MD041": false,
         "MD007": false,
     },
-    "oneDarkPro.editorTheme": "oneDarkPro",
+    "oneDarkPro.editorTheme": "vscode",
     "partialDiff.enableTelemetry": false,
     "python.analysis.autoImportCompletions": false,
     "python.analysis.extraPaths": [
