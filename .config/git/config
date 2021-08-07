@@ -4,15 +4,31 @@
     signingkey = FE7EF85DA8A04AF5
 [core]
     editor = subl -w
-    pager = diff-so-fancy | less --tabs=4 -RFX
 [commit]
     gpgsign = true
 [diff]
     wsErrorHighlight = all
 [feature]
     manyFiles = 1
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
 [interactive]
-    diffFilter = diff-so-fancy --patch
+    diffFilter = delta --color-only --features=interactive
+[delta]
+    features = decorations
+[delta "interactive"]
+    keep-plus-minus-markers = false
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
