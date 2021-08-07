@@ -56,9 +56,9 @@ export TERMINAL="alacritty"
 export BROWSER="google-chrome"
 
 # Fix screen tearing
-if [ -f "$HOME/.local/bin/fix-screen-tearing" ]; then
-    sh -c "$HOME/.local/bin/fix-screen-tearing"
-fi
+# if [ -f "$HOME/.local/bin/fix-screen-tearing" ]; then
+#     sh -c "$HOME/.local/bin/fix-screen-tearing"
+# fi
 
 # Create zsh's cache folder if not present
 if ! [ -d "$HOME/.cache/zsh" ] ; then
@@ -69,9 +69,9 @@ fi
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
 # Execute imwheel if present
-if [ -f "$HOME/.imwheelrc" ]; then
-    [ -x "$(command -v imwheel)" ] && imwheel --kill --buttons="4 5" > /dev/null 2>&1
-fi
+# if [ -f "$HOME/.imwheelrc" ]; then
+#     [ -x "$(command -v imwheel)" ] && imwheel --kill --buttons="4 5" > /dev/null 2>&1
+# fi
 
 # Qt theme
 export QT_QPA_PLATFORMTHEME=qt5ct
