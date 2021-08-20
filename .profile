@@ -39,8 +39,10 @@ export VIRTUALENVWRAPPER_PYTHON="$(which python3)"
 # source "$HOME/.local/bin/virtualenvwrapper.sh"
 
 # Rust
-source "$HOME/.cargo/env"
 # export PATH="$HOME/.cargo/bin:$PATH"
+if [ -f "$HOME/.cargo/env" ] ; then
+    source "$HOME/.cargo/env"
+fi
 # export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 
 # Ruby
