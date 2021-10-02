@@ -16,6 +16,12 @@
         "editor.tabSize": 2,
         "editor.formatOnSave": true,
     },
+    "[markdown]": {
+        "editor.tabSize": 2,
+    },
+    "[django-html]": {
+        // "editor.formatOnSave": true
+    },
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features",
         "editor.tabSize": 2,
@@ -39,7 +45,7 @@
     "editor.detectIndentation": true,
     "editor.dragAndDrop": false,
     "editor.emptySelectionClipboard": true,
-    "editor.find.seedSearchStringFromSelection": true,
+    "editor.find.seedSearchStringFromSelection": "selection",
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": false,
     "editor.mouseWheelScrollSensitivity": 1,
@@ -57,7 +63,6 @@
     "editor.useTabStops": true,
     "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
     "editor.wrappingIndent": "deepIndent",
-    "errorLens.addNumberOfDiagnostics": true,
     "explorer.confirmDragAndDrop": false,
     "explorer.autoReveal": true,
     "extensions.autoUpdate": false,
@@ -192,7 +197,7 @@
     "window.restoreFullscreen": false,
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName} ${dirty}",
     "window.titleBarStyle": "custom",
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "One Dark Pro Darker",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.pinnedTabSizing": "shrink",
     "workbench.editor.tabCloseButton": "right",
@@ -207,9 +212,8 @@
     "workbench.tree.indent": 22,
     "python.linting.enabled": true,
     "python.linting.pylintUseMinimalCheckers": false,
-    "xmlTools.enforcePrettySelfClosingTagOnFormat": true,
-    "xmlTools.enableXmlTreeView": false,
     // "workbench.colorCustomizations": {
+    //     "editor.foreground": "#ffffff",
     //     "editorCursor.foreground": "#0051ff",
     // },
     "editor.fontSize": 13,
@@ -253,19 +257,12 @@
     "html.format.indentInnerHtml": true,
     "files.associations": {
         "**/*.html": "html",
-        "**/templates/**/*.html": "html, django-html",
+        "**/templates/**/*.html": "django-html",
         "**/templates/**/*": "django-txt",
         "**/requirements{/**,*}.{txt,in}": "pip-requirements"
     },
     "emmet.includeLanguages": {
         "django-html": "html"
-    },
-    "beautify.language": {
-        "html": [
-            "htm",
-            "html",
-            "django-html"
-        ]
     },
     "django.i18n": false,
     "html-css-class-completion.enableEmmetSupport": true,
@@ -278,10 +275,6 @@
     "explorer.sortOrder": "filesFirst",
     "editor.minimap.showSlider": "always",
     "html.format.indentHandlebars": true,
-    "[django-html]": {
-        "editor.formatOnSave": true
-    },
-    "markdown.preview.scrollEditorWithPreview": false,
     "yaml.customTags": [
         "!encrypted/pkcs1-oaep scalar",
         "!vault scalar"
@@ -290,4 +283,9 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
+    "editor.fontWeight": "normal",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.suggest.preview": true,
+    "python.testing.pytestEnabled": true,
+    "errorLens.messageTemplate": "[1/$count] $message [$source] <$code> ($severity)",
 }
