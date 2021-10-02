@@ -12,7 +12,7 @@ cp $DOTFILES_HOME/.pdbrc ~/
 cp $DOTFILES_HOME/.profile ~/
 
 # $XDG_CONFIG_HOME
-mkdir -p ~/.config/{alacritty,Code/User,dash-to-panel,flameshot,git,gnome-extensions-sync,htop,i3,i3blocks,lsd,mpv,nano,pulse,sublime-text-3/Packages/User,tmux,tiling-assistant,vim,zellij,zsh}
+mkdir -p ~/.config/{alacritty,Code/User,dash-to-panel,flameshot,git,gnome-extensions-sync,htop,i3,i3blocks,lsd,mpv,nano,pulse,sublime-text/Packages/User,tmux,tiling-assistant,vim,zellij,zsh}
 cp $DOTFILES_CONFIG_HOME/aliasrc ~/.config
 cp $DOTFILES_CONFIG_HOME/alacritty/alacritty.yml ~/.config/alacritty/
 cp $DOTFILES_CONFIG_HOME/Code/User/{keybindings.json,settings.json} ~/.config/Code/User/
@@ -27,7 +27,7 @@ cp $DOTFILES_CONFIG_HOME/lsd/config.yaml ~/.config/lsd/
 cp $DOTFILES_CONFIG_HOME/mpv/mpv.conf ~/.config/mpv/
 cp $DOTFILES_CONFIG_HOME/nano/nanorc ~/.config/nano/
 cp $DOTFILES_CONFIG_HOME/pulse/{daemon.conf,default.pa} ~/.config/pulse/
-cp $DOTFILES_CONFIG_HOME/sublime-text-3/Packages/User/{'Default (Linux).sublime-keymap','Package Control.sublime-settings',Preferences.sublime-settings} ~/.config/sublime-text-3/Packages/User/
+cp $DOTFILES_CONFIG_HOME/sublime-text/Packages/User/{'Default (Linux).sublime-keymap','Package Control.sublime-settings',Preferences.sublime-settings} ~/.config/sublime-text/Packages/User/
 cp $DOTFILES_CONFIG_HOME/tmux/tmux.conf ~/.config/tmux/
 cp $DOTFILES_CONFIG_HOME/tiling-assistant/layouts.json ~/.config/tiling-assistant/
 cp $DOTFILES_CONFIG_HOME/vim/vimrc ~/.config/vim/

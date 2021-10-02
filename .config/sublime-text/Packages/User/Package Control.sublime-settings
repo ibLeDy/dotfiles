@@ -1,0 +1,13 @@
+{
+	"bootstrapped": true,
+	"installed_packages":
+	[
+		"Jedi - Python autocompletion",
+		"MarkdownPreview",
+		"Material Theme",
+		"Package Control",
+	],
+	"in_process_packages":
+	[
+	],
+}
