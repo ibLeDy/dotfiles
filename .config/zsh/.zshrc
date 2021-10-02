@@ -20,9 +20,9 @@ plugins=(
     kubectl
     safe-paste
     virtualenvwrapper
-    zsh-autosuggestions
+    #zsh-autosuggestions
     zsh-completions
-    zsh-syntax-highlighting
+    #zsh-syntax-highlighting
 )
 
 # Reload tab completion
@@ -35,6 +35,9 @@ bindkey '^ ' autosuggest-accept
 
 # Don't cd to directory of same name as a non-found executable
 unsetopt AUTO_CD
+
+# Don't auto insert possibilities
+unsetopt AUTO_MENU
 
 # Load powerlevel10k config
 [[ ! -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/.p10k.zsh" ]] || source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/.p10k.zsh"
