@@ -148,4 +148,4 @@ load-module module-filter-apply
 #set-default-source input
 
 # Subwoofer
-load-module module-combine-sink channels=3 channel_map=front-left,front-right,lfe
+#load-module module-combine-sink channels=3 channel_map=front-left,front-right,lfe
