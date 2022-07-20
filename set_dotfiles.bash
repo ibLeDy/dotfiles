@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOTFILES_HOME=$HOME/workspace/repos/ibLeDy/dotfiles
+DOTFILES_HOME=$( dirname -- "$0"; )
 DOTFILES_CONFIG_HOME=$DOTFILES_HOME/.config
 DOTFILES_LOCAL_BIN=$DOTFILES_HOME/.local/bin
 DOTFILES_LOCAL_SHARE=$DOTFILES_HOME/.local/share
