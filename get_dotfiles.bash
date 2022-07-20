@@ -7,6 +7,7 @@ DOTFILES_LOCAL_SHARE=$DOTFILES_HOME/.local/share
 
 # $HOME
 cp ~/.asoundrc $DOTFILES_HOME
+cp ~/.bashrc $DOTFILES_HOME
 cp ~/.imwheelrc $DOTFILES_HOME
 cp ~/.pdbrc $DOTFILES_HOME
 cp ~/.profile $DOTFILES_HOME
