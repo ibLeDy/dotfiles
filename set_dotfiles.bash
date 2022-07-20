@@ -5,6 +5,7 @@ DOTFILES_CONFIG_HOME=$DOTFILES_HOME/.config
 DOTFILES_LOCAL_SHARE=$DOTFILES_HOME/.local/share
 
 # $HOME
+cp $DOTFILES_HOME/.bashrc ~/
 cp $DOTFILES_HOME/.pdbrc ~/
 cp $DOTFILES_HOME/.profile ~/
 
