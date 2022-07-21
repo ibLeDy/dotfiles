@@ -15,7 +15,7 @@ cp $DOTFILES_HOME/.profile ~/
 
 # $XDG_CONFIG_HOME
 mkdir -p ~/.config/{alacritty,Code/User,dash-to-panel,flameshot,git,gnome-extensions-sync,htop,i3,i3blocks,lsd,mpv,nano,pulse,sublime-text/Packages/User,tmux,tiling-assistant,vim,zellij,zsh}
-cp $DOTFILES_CONFIG_HOME/aliasrc ~/.config
+cp $DOTFILES_CONFIG_HOME/aliasrc ~/.config/
 cp $DOTFILES_CONFIG_HOME/alacritty/alacritty.yml ~/.config/alacritty/
 cp $DOTFILES_CONFIG_HOME/Code/User/{keybindings.json,settings.json} ~/.config/Code/User/
 cp $DOTFILES_CONFIG_HOME/dash-to-panel/dash-to-panel-settings ~/.config/dash-to-panel/
