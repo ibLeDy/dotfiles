@@ -1,23 +1,17 @@
 #!/usr/bin/env bash
 
-# Verbosity
 alias \
     cp="cp -iv" \
     mv="mv -iv" \
-    rm="rm -Iv"
-
-# Colorize commands when possible.
-alias \
-    ls="ls -hN --color=auto --group-directories-first" \
+    rm="rm -iv" \
+    ls="ls -h --color=auto" \
     grep="grep --color=auto" \
-    diff="diff --color=auto"
-
-# Shorter commands
-alias \
-    open="xdg-open" \
-    ytdl="youtube-dl --merge-output-format mkv" \
-    lbrynet="/opt/LBRY/resources/static/daemon/lbrynet" \
-    tree="tree --dirsfirst -C -a -I '.git|.venv|*cache*|target'"
+    diff="diff --color=auto" \
+    alacritty="/Applications/Alacritty.app/Contents/MacOS/alacritty" \
+    tree="tree --dirsfirst -C -a -I '.git|.venv|*cache*|target'" \
+    tar="COPYFILE_DISABLE=1 tar --exclude='*.pyc' --exclude='.DS_Store'" \
+    nssh="ssh -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile /dev/null'" \
+    subl="$HOME/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim"
@@ -27,8 +21,3 @@ alias \
 
 # Use lsd for ls if present.
 [ -x "$(command -v lsd)" ] && alias ls="lsd"
-
-# Friendlier copy commands for xclip if present
-[ -x "$(command -v xclip)" ] && alias \
-    pbcopy="xclip -selection c" \
-    pbpaste="xclip -o -selection c"

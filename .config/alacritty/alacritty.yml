@@ -35,7 +35,7 @@ window:
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
   position:
-    x: 3700
+    x: 1700
     y: 300
 
   # Window padding (changes require restart)
@@ -46,14 +46,12 @@ window:
     x: 0
     y: 0
 
-  # Background opacity
-  #
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: true
+
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.98
-
-  # Spread additional padding evenly around the terminal content.
-  # dynamic_padding: true
+  opacity: 0.96
 
   # Window decorations
   #
@@ -64,7 +62,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: none
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -114,10 +112,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: UbuntuMono Nerd Font
+    family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Retina
 
   # Bold font face
   #bold:
@@ -153,7 +151,7 @@ font:
   #style: Bold Italic
 
   # Point size
-  size: 11.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -333,7 +331,9 @@ bell:
   #     program: notify-send
   #     args: ["Hello, World!"]
   #
-  command: xkbbell
+  command:
+    program: tput
+    args: [bel]
 
 #selection:
 # This string contains all characters that are used as separators for
@@ -382,7 +382,7 @@ live_config_reload: true
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
-  program: /usr/bin/zsh
+  program: /bin/zsh
 #  args:
 #    - --login
 
@@ -654,7 +654,22 @@ shell:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 key_bindings:
-  - { key: N, mods: Control, action: SpawnNewInstance }
+  # Ajustes para teclado macOS español/Spanish de España con layout ISO (no ANSI); tecla Intro grande.
+  - { key: 10, mods: Alt, chars: "\x5c" } # `\`
+  - { key: 18, mods: Alt, chars: "\x7c" } # `|`
+  - { key: Key2, mods: Alt, chars: "@" } # `@`
+  - { key: Key3, mods: Alt, chars: "#" } # `#`
+  - { key: Key6, mods: Alt, chars: "¬" } # `¬`
+  - { key: 39, mods: Alt, chars: "{" } # `{`
+  - { key: 42, mods: Alt, chars: "}" } # `}`
+  - { key: 33, mods: Alt, chars: "[" } # `[`
+  - { key: 30, mods: Alt, chars: "]" } # `]`
+  #- { key: N,         mods: Command,action: SpawnNewInstance }
+  - { key: N, mods: Command, action: CreateNewWindow }
+  - { key: W, mods: Command, action: None }
+  # Word by word navigation
+  - { key: Left, mods: Alt, chars: "\x1BB" }
+  - { key: Right, mods: Alt, chars: "\x1BF" }
   #- { key: Paste,                                action: Paste          }
   #- { key: Copy,                                 action: Copy           }
   #- { key: L,         mods: Control,             action: ClearLogNotice }
