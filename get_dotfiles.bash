@@ -19,7 +19,7 @@ cp ~/.config/flameshot/flameshot.conf $DOTFILES_CONFIG_HOME/flameshot/
 cp ~/.config/git/{config,ignore} $DOTFILES_CONFIG_HOME/git/
 cp ~/.config/htop/htoprc $DOTFILES_CONFIG_HOME/htop/
 cp ~/.config/lsd/config.yaml $DOTFILES_CONFIG_HOME/lsd/
-cp ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/{'Default (Linux).sublime-keymap','Package Control.sublime-settings',Preferences.sublime-settings} $DOTFILES_CONFIG_HOME/sublime-text/Packages/User/
+cp ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/{'Default (OSX).sublime-keymap','Package Control.sublime-settings',Preferences.sublime-settings} $DOTFILES_CONFIG_HOME/sublime-text/Packages/User/
 cp ~/.config/tmux/tmux.conf $DOTFILES_CONFIG_HOME/tmux/
 cp ~/.config/vim/vimrc $DOTFILES_CONFIG_HOME/vim/
 cp ~/.config/zellij/config.yaml $DOTFILES_CONFIG_HOME/zellij/
