@@ -35,7 +35,7 @@ export GPG_TTY=$(tty)
 
 # Python
 # export PYTHONPATH="$HOME/.local/lib/python3.8:$PYTHONPATH"
-export VIRTUALENVWRAPPER_PYTHON="$(which python3)"
+export VIRTUALENVWRAPPER_PYTHON="$(command -v python3)"
 # . "$HOME/.local/bin/virtualenvwrapper.sh"
 
 # Rust
