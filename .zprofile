@@ -64,10 +64,5 @@ fi
 # Set formatting for `time` command
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
-# Execute imwheel if present
-# if [ -f "$HOME/.imwheelrc" ]; then
-#     [ -x "$(command -v imwheel)" ] && imwheel --kill --buttons="4 5" > /dev/null 2>&1
-# fi
-
 # Qt theme
 export QT_QPA_PLATFORMTHEME=qt5ct
