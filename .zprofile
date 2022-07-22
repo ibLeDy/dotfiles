@@ -57,11 +57,6 @@ export VISUAL="vim"
 export TERMINAL="alacritty"
 export BROWSER="google-chrome"
 
-# Fix screen tearing
-# if [ -f "$HOME/.local/bin/fix-screen-tearing" ]; then
-#     sh -c "$HOME/.local/bin/fix-screen-tearing"
-# fi
-
 # Create zsh's cache folder if not present
 if ! [ -d "$HOME/.cache/zsh" ] ; then
     mkdir "$HOME/.cache/zsh"
