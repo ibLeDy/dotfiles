@@ -43,7 +43,7 @@ plugins=(
 autoload -U compinit && compinit
 
 # Load OMZ
-source $ZSH/oh-my-zsh.sh
+. $ZSH/oh-my-zsh.sh
 
 # Accept current suggestion with ctrl + space
 #bindkey '^ ' autosuggest-accept
@@ -110,12 +110,12 @@ vgssh() {
 }
 
 # To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || . ~/.config/zsh/.p10k.zsh
 
 # Pyenv
 # eval "$(pyenv init -)"
 
-source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
 
 export GPG_TTY=$(tty)
 
@@ -125,4 +125,4 @@ fpath+=~/.zfunc
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 # Load aliases if existent
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
