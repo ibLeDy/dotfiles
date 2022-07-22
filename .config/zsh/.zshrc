@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Environment variables
-export VIMINIT=". ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
+export VIMINIT="source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
 export EDITOR="$HOME/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 export VISUAL="vim"
 export PATH="/usr/local/bin:$PATH"
