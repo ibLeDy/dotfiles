@@ -26,6 +26,7 @@ cp ~/.config/zellij/config.yaml $DOTFILES_CONFIG_HOME/zellij/
 cp ~/.config/zsh/.{p10k.zsh,zshrc} $DOTFILES_CONFIG_HOME/zsh/
 
 # $HOME/.gnupg
+mkdir -p $DOTFILES_HOME/.gnupg/
 cp ~/.gnupg/gpg-agent.conf $DOTFILES_HOME/.gnupg/
 
 # $HOME/.local/bin
@@ -33,6 +34,7 @@ mkdir -p $DOTFILES_LOCAL_BIN
 cp ~/.local/bin/{countdown,mute-spotify-ads} $DOTFILES_LOCAL_BIN
 
 # $HOME/.ssh
+mkdir -p $DOTFILES_HOME/.ssh/
 cp ~/.ssh/config $DOTFILES_HOME/.ssh/
 
 # $HOME/.local/share
