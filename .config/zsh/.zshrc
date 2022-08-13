@@ -6,6 +6,7 @@ export VIMINIT="source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
 export EDITOR="$HOME/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 export VISUAL="vim"
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/Library/Python/3.8/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PIP_REQUIRE_VIRTUALENV=true
