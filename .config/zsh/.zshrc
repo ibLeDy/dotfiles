@@ -127,3 +127,6 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 # Load aliases if existent
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
+
+# Load fzf config if it exists
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
