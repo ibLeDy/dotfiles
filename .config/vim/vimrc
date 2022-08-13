@@ -60,7 +60,7 @@ set showcmd
 set number
 
 " Show relative line numbers
-set relativenumber
+"set relativenumber
 
 " Encoding
 set encoding=utf-8
