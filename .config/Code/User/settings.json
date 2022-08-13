@@ -1,8 +1,21 @@
 {
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python",
-        "editor.codeLens": false,
-        // "editor.semanticHighlighting.enabled": false,
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+    },
+    "[dockercompose]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features",
@@ -10,20 +23,9 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.tabSize": 2,
-        "editor.formatOnSave": true,
-    },
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2,
-    },
-    "[css]": {
-        "editor.defaultFormatter": "vscode.css-language-features",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.codeLens": false,
     },
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml",
@@ -41,6 +43,19 @@
     "editor.mouseWheelScrollSensitivity": 1,
     "editor.multiCursorModifier": "ctrlCmd",
     "extensions.autoUpdate": false,
+    "files.associations": {
+        ".env": "plaintext",
+        "**/handlers/*.{yaml,yml}": "ansible",
+        "**/inventory/*.{yaml,yml}": "ansible",
+        "**/meta/*.{yaml,yml}": "ansible",
+        "**/molecule/*/*.{yaml,yml}": "ansible",
+        "**/playbooks/*.{yaml,yml}": "ansible",
+        "**/tasks/*.{yaml,yml}": "ansible",
+        "**/roles/*.{yaml,yml}": "ansible",
+        "**/vault/*.{yaml,yml}": "ansible",
+        "**/galaxy.{yaml,yml}": "ansible",
+        "**/{host_vars,group_vars,vars,defaults}/**/*.{yaml,yml}": "ansible",
+    },
     "files.exclude": {
         "**/.git": true,
         "**/.mypy_cache": true,
@@ -66,7 +81,6 @@
     "partialDiff.enableTelemetry": false,
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName} ${dirty}",
     "editor.cursorBlinking": "solid",
-    "python.showStartPage": false,
     "workbench.colorTheme": "One Dark Pro Darker",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.enableExperiments": false,
@@ -127,8 +141,6 @@
     "oneDarkPro.markdownStyle": false,
     "python.linting.pylintEnabled": true,
     "python.linting.pylintArgs": [
-        "--load-plugins=pylint_odoo",
-        "--enable=odoolint",
         "--persistent=no",
         "--unsafe-load-any-extension=no",
         "--indent-after-paren=4",
@@ -136,7 +148,6 @@
         "--ignore-comments=yes",
         "--ignore-docstrings=yes",
         "--ignore-imports=no",
-        "--disable=E1101,C0301,manifest-required-author,manifest-deprecated-key,invalid-name,protected-access,no-else-return,no-member,import-error,attribute-defined-outside-init,print-used,redefined-outer-name,missing-function-docstring,missing-class-docstring,missing-module-docstring,fixme,missing-readme,too-many-instance-attributes,too-many-public-methods,too-few-public-methods,no-self-use,bad-continuation"
     ],
     "search.searchOnType": true,
     "search.seedOnFocus": true,
@@ -156,8 +167,6 @@
     "workbench.list.horizontalScrolling": true,
     "search.collapseResults": "auto",
     "search.showLineNumbers": true,
-    "bracket-pair-colorizer-2.colorMode": "Independent",
-    "bracket-pair-colorizer-2.showBracketsInRuler": true,
     "search.smartCase": true,
     "python.linting.pylintUseMinimalCheckers": false,
     "workbench.sash.size": 6,
@@ -165,7 +174,6 @@
     "python.formatting.provider": "black",
     "workbench.sash.hoverDelay": 50,
     "files.trimFinalNewlines": false,
-    "odooScaffold.odooTemplatePath": "/Users/ialonso/Development/custom_addons12/all_scaffold_template/module",
     "git.autofetch": true,
     "redhat.telemetry.enabled": false,
     "html-css-class-completion.enableEmmetSupport": true,
@@ -183,8 +191,7 @@
         "!encrypted/pkcs1-oaep scalar",
         "!vault scalar"
     ],
-    "ansible.validate.executablePath": "ansible-lint",
-    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "python.defaultInterpreterPath": "python3",
     "editor.cursorStyle": "line",
     "terminal.integrated.scrollback": 10000,
     "python.formatting.blackPath": "/usr/local/bin/black",
@@ -197,7 +204,6 @@
     "pythonTestExplorer.testFramework": "pytest",
     "jupyter.experiments.enabled": false,
     "testExplorer.gutterDecoration": false,
-    "docker.showStartPage": false,
     "rust-analyzer.cargo.allFeatures": true,
     "rust-analyzer.debug.openDebugPane": true,
     "rust-analyzer.hoverActions.references": true,
@@ -206,9 +212,6 @@
     "rust-analyzer.workspace.symbol.search.scope": "workspace_and_dependencies",
     "editor.bracketPairColorization.enabled": true,
     "editor.find.seedSearchStringFromSelection": "selection",
-    "files.associations": {
-        ".env": "plaintext"
-    },
     "errorLens.enabled": true,
     "editor.guides.bracketPairs": true,
     "telemetry.telemetryLevel": "off",
