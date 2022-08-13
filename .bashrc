@@ -118,3 +118,6 @@ fi
 
 # Load aliases if existent
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
+
+# Load fzf config if it exists
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
