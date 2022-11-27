@@ -54,7 +54,6 @@ export PATH="$HOME/gems/bin:$PATH"
 # Default programs:
 export VISUAL="vim"
 export TERMINAL="alacritty"
-export BROWSER="google-chrome"
 
 # Create zsh's cache folder if not present
 if ! [ -d "$HOME/.cache/zsh" ] ; then
