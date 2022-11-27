@@ -14,7 +14,7 @@ export ANSIBLE_NOCOWS=1
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 COMPLETION_WAITING_DOTS="false"
-HISTFILE="$XDG_CACHE_HOME/zsh/history"  # TODO: remove
+HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 HIST_STAMPS="mm/dd/yyyy"
 HISTSIZE=10000
 SAVEHIST=10000
@@ -111,6 +111,12 @@ vgssh() {
     tmux rename-window "zsh"
 }
 
+nssh() {
+    tmux rename-window "$*"
+    command ssh -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null" "$@"
+    tmux rename-window "zsh"
+}
+
 # To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || . ~/.config/zsh/.p10k.zsh
 
@@ -128,6 +134,9 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 # Load aliases if existent
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
+
+# Load .zprofile if it exists
+[ -f "$HOME/.zprofile" ] && . "$HOME/.zprofile"
 
 # Load fzf config if it exists
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
