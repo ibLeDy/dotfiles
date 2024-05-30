@@ -9,7 +9,7 @@
 
 [core]
     excludesfile = ~/.config/git/ignore
-    editor = subl --launch-or-new-window -w
+    editor = code --disable-extensions --new-window --wait
 
 [init]
     templateDir = ~/.config/git/templates
