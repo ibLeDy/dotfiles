@@ -6,11 +6,12 @@ alias \
     rm="rm -iv" \
     ls="ls -h --color=auto" \
     grep="grep --color=auto" \
-    brew="sudo -Hu brew brew" \
+    k="kubectl" \
     alacritty="/Applications/Alacritty.app/Contents/MacOS/alacritty" \
     tree="tree --dirsfirst -C -a -I '.git|.venv|*cache*|target'" \
     tar="COPYFILE_DISABLE=1 tar --exclude='*.pyc' --exclude='.DS_Store'" \
     nssh="ssh -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile /dev/null'" \
+    hssh="nssh -i ~/.ssh/hetzner_default_rsa_key -l root" \
     subl="$HOME/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # Use neovim for vim if present.
