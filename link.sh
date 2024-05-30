@@ -8,7 +8,7 @@ link_file() {
     then
         echo "$2 is broken"
     else
-        ln -s $1 $2
+        ln -s "$1" "$2"
     fi
 }
 
