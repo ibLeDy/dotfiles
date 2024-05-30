@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
+BASE_BRANCH=master
 CURRENT_BRANCH=$(git branch --show-current)
 
-if git checkout master
+if git checkout $BASE_BRANCH
 then
     git pull
     if ! git branch -d $CURRENT_BRANCH
