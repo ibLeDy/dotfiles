@@ -4,6 +4,9 @@
 [includeIf "gitdir:~/workspace/repos/ibLeDy/"]
     path = ~/.config/git/config.d/personal
 
+[includeIf "gitdir:~/workspace/repos/bLeDy/"]
+    path = ~/.config/git/config.d/personal
+
 [core]
     excludesfile = ~/.config/git/ignore
     editor = subl --launch-or-new-window -w
