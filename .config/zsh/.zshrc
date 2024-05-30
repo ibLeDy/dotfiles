@@ -27,7 +27,7 @@ plugins=(
     docker
     docker-compose
     git
-    git-flow-completion
+    #git-flow-completion
     colorize
     colored-man-pages
     compleat
