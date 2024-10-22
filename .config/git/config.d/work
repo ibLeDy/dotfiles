@@ -1,5 +1,5 @@
 [core]
-    sshCommand = ssh -i ~/.ssh/ialonso.pub
+    sshCommand = ssh -i ~/.ssh/ialonso
 
 [user]
     name = Iago Alonso
