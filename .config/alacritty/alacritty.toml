@@ -1,0 +1,145 @@
+live_config_reload = true
+
+[bell]
+animation = "EaseOutExpo"
+color = "#ffffff"
+duration = 10
+
+[bell.command]
+args = ["bel"]
+program = "tput"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "0x44464d"
+blue = "0x2561f7"
+cyan = "0x029cb0"
+green = "0x00e676"
+magenta = "0x8349eb"
+red = "0xf53122"
+white = "0xFFFFFF"
+yellow = "0xffeb3b"
+
+[colors.normal]
+black = "0x202124"
+blue = "0x224ebd"
+cyan = "0x00bcd4"
+green = "0x00a655"
+magenta = "0x673ab7"
+red = "0xf44336"
+white = "0xC4C4C4"
+yellow = "0xdbca32"
+
+[colors.primary]
+background = "0x1A1A1A"
+foreground = "0xFFFFFF"
+
+[colors.selection]
+background = "0x3465A4"
+text = "0xFFFFFF"
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Retina"
+
+[[keyboard.bindings]]
+chars = '\'
+key = 10
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "|"
+key = 18
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "@"
+key = "Key2"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "#"
+key = "Key3"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "¬"
+key = "Key6"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "{"
+key = 39
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "}"
+key = 42
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "["
+key = 33
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "]"
+key = 30
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "None"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BF"
+key = "Right"
+mods = "Alt"
+
+[scrolling]
+history = 10000
+multiplier = 2
+
+[shell]
+program = "/bin/zsh"
+
+[window]
+decorations = "full"
+dynamic_padding = true
+dynamic_title = true
+opacity = 0.98
+
+[window.dimensions]
+columns = 100
+lines = 32
+
+[window.padding]
+x = 0
+y = 0
+
+[window.position]
+x = 1700
+y = 300

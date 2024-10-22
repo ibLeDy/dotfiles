@@ -28,7 +28,7 @@ mkdir -p ~/.config/{alacritty,flameshot,git/{config.d,templates/hooks},htop,lsd,
 mkdir -p ~/Library/'Application Support'/Code/User
 mkdir -p ~/Library/'Application Support'/'Sublime Text'/Packages/User
 link_file "$DOTFILES_CONFIG_HOME"/aliasrc ~/.config/aliasrc
-link_file "$DOTFILES_CONFIG_HOME"/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+link_file "$DOTFILES_CONFIG_HOME"/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 link_file "$DOTFILES_CONFIG_HOME"/Code/User/keybindings.json ~/Library/'Application Support'/Code/User/keybindings.json
 link_file "$DOTFILES_CONFIG_HOME"/Code/User/settings.json ~/Library/'Application Support'/Code/User/settings.json
 # link_file "$DOTFILES_CONFIG_HOME"/flameshot/flameshot.conf ~/.config/flameshot/flameshot.conf
