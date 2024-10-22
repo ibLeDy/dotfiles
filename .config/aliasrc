@@ -12,7 +12,7 @@ alias \
     tar="COPYFILE_DISABLE=1 tar --exclude='*.pyc' --exclude='.DS_Store'" \
     nssh="ssh -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile /dev/null'" \
     hssh="nssh -i ~/.ssh/hetzner_default_rsa_key -l root" \
-    subl="$HOME/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+    subl="/Applications/'Sublime Text.app'/Contents/SharedSupport/bin/subl"
 
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim"
