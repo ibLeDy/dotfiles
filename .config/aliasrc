@@ -14,6 +14,16 @@ alias \
     hssh="nssh -i ~/.ssh/hetzner_default_rsa_key -l root" \
     subl="/Applications/'Sublime Text.app'/Contents/SharedSupport/bin/subl"
 
+# K8S cluster aliases
+alias \
+    k00="KUBECONFIG=~/.kube/kube_config_cl00 kubectl" \
+    k01="KUBECONFIG=~/.kube/kube_config_cl01 kubectl" \
+    k02="KUBECONFIG=~/.kube/kube_config_cl02 kubectl" \
+    k11="KUBECONFIG=~/.kube/kube_config_cl11 kubectl" \
+    k13="KUBECONFIG=~/.kube/kube_config_cl13 kubectl" \
+    k15="KUBECONFIG=~/.kube/kube_config_cl15 kubectl" \
+    k99="KUBECONFIG=~/.kube/kube_config_cl99 kubectl"
+
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim"
 
