@@ -1,3 +1,4 @@
+[general]
 live_config_reload = true
 
 [bell]
@@ -123,7 +124,7 @@ mods = "Alt"
 history = 10000
 multiplier = 2
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 
 [window]
