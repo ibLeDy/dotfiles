@@ -1,34 +1,54 @@
 #!/usr/bin/env bash
 
-# Verbosity
 alias \
-    cp="cp -iv" \
-    mv="mv -iv" \
-    rm="rm -Iv"
+    cp='cp -iv' \
+    mv='mv -iv' \
+    rm='rm -Iv' \
+    ls='ls -hN --color=auto --group-directories-first' \
+    ll='ls -alF' \
+    la='ls -lA' \
+    l='ls -CF' \
+    dir='dir --color=auto' \
+    vdir='vdir --color=auto' \
+    grep='grep --color=auto' \
+    fgrep='fgrep --color=auto' \
+    egrep='egrep --color=auto' \
+    diff='diff --color=auto' \
+    tree="tree --dirsfirst -C -a -I '.git|.venv|*cache*|target'" \
+    tar="COPYFILE_DISABLE=1 tar --exclude='*.pyc'" \
+    open='xdg-open' \
+    ytdl='youtube-dl --merge-output-format mkv' \
+    k='kubectl' \
+    kn='kubectl config set-context --current --namespace' \
+    tf='terraform' \
+    sdig='dig +short' \
+    rdig='dig +short -x' \
+    nssh="ssh -q -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile /dev/null'" \
+    ossh='nssh -q -i ~/.ssh/ovh_default_rsa_key' \
+    hssh='nssh -q -i ~/.ssh/hetzner_default_rsa_key'
 
-# Colorize commands when possible.
-alias \
-    ls="ls -hN --color=auto --group-directories-first" \
-    grep="grep --color=auto" \
-    diff="diff --color=auto"
+# Use neovim for vim if present
+[ -x "$(command -v nvim)" ] && alias vim='nvim'
 
-# Shorter commands
-alias \
-    open="xdg-open" \
-    ytdl="youtube-dl --merge-output-format mkv" \
-    lbrynet="/opt/LBRY/resources/static/daemon/lbrynet" \
-    tree="tree --dirsfirst -C -a -I '.git|.venv|*cache*|target'"
+# Use bat for cat if present
+[ -x "$(command -v batcat)" ] && alias cat='batcat'
 
-# Use neovim for vim if present.
-[ -x "$(command -v nvim)" ] && alias vim="nvim"
-
-# Use bat for cat if present.
-[ -x "$(command -v bat)" ] && alias cat="bat"
-
-# Use lsd for ls if present.
-[ -x "$(command -v lsd)" ] && alias ls="lsd"
+# Use lsd for ls if present
+[ -x "$(command -v lsd)" ] && alias ls='lsd'
 
 # Friendlier copy commands for xclip if present
 [ -x "$(command -v xclip)" ] && alias \
-    pbcopy="xclip -selection c" \
-    pbpaste="xclip -o -selection c"
+    pbcopy='xclip -selection c' \
+    pbpaste='xclip -o -selection c'
+
+# K8S aliases
+alias \
+    k00='KUBECONFIG=~/.kube/kube_config_cl00 kubectl' \
+    k01='KUBECONFIG=~/.kube/kube_config_cl01 kubectl' \
+    k02='KUBECONFIG=~/.kube/kube_config_cl02 kubectl' \
+    k03='KUBECONFIG=~/.kube/kube_config_cl03 kubectl' \
+    k04='KUBECONFIG=~/.kube/kube_config_cl04 kubectl' \
+    k05='KUBECONFIG=~/.kube/kube_config_cl05 kubectl' \
+    k11='KUBECONFIG=~/.kube/kube_config_cl11 kubectl' \
+    k13='KUBECONFIG=~/.kube/kube_config_cl13 kubectl' \
+    k15='KUBECONFIG=~/.kube/kube_config_cl15 kubectl'

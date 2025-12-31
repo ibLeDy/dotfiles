@@ -1,34 +1,63 @@
-[user]
-    name = Iago Alonso
-    email = deejaynof@gmail.com
-    signingkey = FE7EF85DA8A04AF5
+[includeIf "gitdir:*"]
+    path = ~/.config/git/config.d/work
+    excludesfile = ~/.config/git/ignore-work
+
+[includeIf "gitdir:~/workspace/repos/ibLeDy/"]
+    path = ~/.config/git/config.d/personal
+    excludesfile = ~/.config/git/ignore-personal
+
 [core]
-    editor = subl -w
+    #editor = subl --launch-or-new-window --wait
+    editor = code --new-window --disable-extensions --wait
+
+[init]
+    templateDir = ~/.config/git/templates
+
 [commit]
     gpgsign = true
+
+[pull]
+    ff = only
+
+[fetch]
+    prune = true
+
+[merge]
+    ff = no
+
+[submodule]
+    recurse = true
+
 [diff]
     wsErrorHighlight = all
+
 [feature]
     manyFiles = 1
-# [pager]
-#     diff = delta
-#     log = delta
-#     reflog = delta
-#     show = delta
-# [interactive]
-#     diffFilter = delta --color-only --features=interactive
-# [delta]
-#     features = decorations
-# [delta "interactive"]
-#     keep-plus-minus-markers = false
-# [delta "decorations"]
-#     commit-decoration-style = blue ol
-#     commit-style = raw
-#     file-style = omit
-#     hunk-header-decoration-style = blue box
-#     hunk-header-file-style = red
-#     hunk-header-line-number-style = "#067a00"
-#     hunk-header-style = file line-number syntax
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    features = decorations
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f

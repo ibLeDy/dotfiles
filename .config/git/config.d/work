@@ -1,0 +1,7 @@
+[user]
+    name = Iago Alonso
+    email = iago.alonso@marfeel.com
+    signingkey = 232ED3ACD6920F7D
+
+[init]
+    defaultBranch = master

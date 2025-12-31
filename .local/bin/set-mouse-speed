@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-xinput set-prop "Kingsis Peripherals ZOWIE Gaming mouse" "Coordinate Transformation Matrix" 0.5, 0, 0, 0, 0.5, 0, 0, 0, 1
+xinput set-prop 18 "libinput Accel Speed" 0.05

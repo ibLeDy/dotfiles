@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if  [ -z "$1" ]
+then
+    DEFAULT_BRANCH="master"
+else
+    DEFAULT_BRANCH="$1"
+fi
+
+CURRENT_BRANCH=$(git branch --show-current)
+
+git stash
+git checkout "$DEFAULT_BRANCH"
+git pull
+git checkout "$CURRENT_BRANCH"
+git merge "$DEFAULT_BRANCH"
+git stash pop

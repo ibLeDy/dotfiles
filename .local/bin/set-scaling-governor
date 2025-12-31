@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+MAX_FREQ=1300000
+
+read -p "Set scaling governor to: " GOVERNOR
+
+if [ "$GOVERNOR" == "performance" ] || [ "$GOVERNOR" == "powersave" ]
+then
+    for idx in {0..11}; do echo "$GOVERNOR" | sudo tee /sys/devices/system/cpu/cpu${idx}/cpufreq/scaling_governor; echo "$MAX_FREQ" | sudo tee /sys/devices/system/cpu/cpu${idx}/cpufreq/scaling_min_freq; done
+else
+    echo "Value $GOVERNOR is not a valid scaling governor"
+fi

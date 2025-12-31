@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]
+then
+    DEFAULT_BRANCH="master"
+else
+    DEFAULT_BRANCH="$1"
+fi
+
+CURRENT_BRANCH=$(git branch --show-current)
+
+if git checkout "$DEFAULT_BRANCH"
+then
+    git pull
+    if ! git branch -d "$CURRENT_BRANCH"
+    then
+        printf 'Delete anyway? (y/n)? '
+        read -r answer
+        if [ "$answer" != "${answer#[Yy]}" ]
+        then
+            git branch -D "$CURRENT_BRANCH"
+        fi
+    fi
+fi

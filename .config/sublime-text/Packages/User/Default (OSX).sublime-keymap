@@ -1,0 +1,6 @@
+[
+    { "keys": ["command+option+7"], "command": "toggle_comment", "args": { "block": false } },
+    { "keys": ["command+shift+7"], "command": "toggle_comment", "args": { "block": true } },
+    { "keys": ["alt+up"], "command": "swap_line_up" },
+    { "keys": ["alt+down"], "command": "swap_line_down" },
+]
