@@ -75,7 +75,3 @@ link_file "$DOTFILES_LOCAL_BIN"/update-current-branch ~/.local/bin/update-curren
 link_file "$DOTFILES_LOCAL_BIN"/delete-merged-branch ~/.local/bin/delete-merged-branch
 link_file "$DOTFILES_LOCAL_BIN"/wakeup-workaround ~/.local/bin/wakeup-workaround
 link_file "$DOTFILES_LOCAL_BIN"/fix-caret ~/.local/bin/fix-caret
-
-# $HOME/.ssh
-mkdir -p ~/.ssh
-link_file "$DOTFILES_HOME"/.ssh/config ~/.ssh/config
