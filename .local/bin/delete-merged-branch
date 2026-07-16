@@ -1,18 +1,84 @@
 #!/usr/bin/env bash
 
-BASE_BRANCH=master
+set -e
+
+if [ "$#" -gt 1 ]
+then
+    printf 'Usage: %s [base-branch]\n' "$0" >&2
+    exit 2
+fi
+
+if [ "$#" -eq 1 ]
+then
+    BASE_BRANCH=$1
+else
+    if ! DEFAULT_BRANCH=$(git symbolic-ref --quiet --short refs/remotes/origin/HEAD)
+    then
+        printf 'Error: cannot detect the default branch from origin/HEAD.\n' >&2
+        printf 'Pass the base branch explicitly or run: git remote set-head origin --auto\n' >&2
+        exit 1
+    fi
+    BASE_BRANCH=${DEFAULT_BRANCH#origin/}
+fi
+
 CURRENT_BRANCH=$(git branch --show-current)
 
-if git checkout $BASE_BRANCH
+if [ -z "$CURRENT_BRANCH" ]
 then
-    git pull
-    if ! git branch -d $CURRENT_BRANCH
+    printf 'Error: cannot delete a branch from a detached HEAD.\n' >&2
+    exit 1
+fi
+
+if [ "$CURRENT_BRANCH" = "$BASE_BRANCH" ]
+then
+    printf 'Error: current branch is already the base branch "%s".\n' "$BASE_BRANCH" >&2
+    exit 1
+fi
+
+STASHED=false
+STASH_COMMIT=
+
+restore_stash()
+{
+    status=$?
+    trap - EXIT
+
+    if [ "$STASHED" = true ]
     then
-        printf 'Delete anyway? (y/n)? '
-        read answer
-        if [ "$answer" != "${answer#[Yy]}" ]
+        if [ "$(git rev-parse --verify refs/stash 2>/dev/null)" != "$STASH_COMMIT" ]
         then
-            git branch -D $CURRENT_BRANCH
+            printf 'Error: temporary stash is no longer at the top of the stash list; restore it manually.\n' >&2
+            exit 1
         fi
+
+        if ! git stash pop --index
+        then
+            printf 'Error: could not restore the temporary stash; resolve it manually.\n' >&2
+            exit 1
+        fi
+    fi
+
+    exit "$status"
+}
+
+trap restore_stash EXIT
+
+if [ -n "$(git status --porcelain)" ]
+then
+    git stash push --include-untracked --message "$0: temporary stash"
+    STASH_COMMIT=$(git rev-parse --verify refs/stash)
+    STASHED=true
+fi
+
+git checkout "$BASE_BRANCH"
+git pull
+
+if ! git branch -d "$CURRENT_BRANCH"
+then
+    printf 'Delete anyway? (y/n)? '
+    read -r answer
+    if [ "$answer" != "${answer#[Yy]}" ]
+    then
+        git branch -D "$CURRENT_BRANCH"
     fi
 fi
