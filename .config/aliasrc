@@ -7,6 +7,7 @@ alias \
     ls="ls -h --color=auto" \
     grep="grep --color=auto" \
     k="kubectl" \
+    zj="zellij" \
     alacritty="/Applications/Alacritty.app/Contents/MacOS/alacritty" \
     tree="tree --dirsfirst -C -a -I '.git|.venv|*cache*|target'" \
     tar="COPYFILE_DISABLE=1 tar --exclude='*.pyc' --exclude='.DS_Store'" \
@@ -21,6 +22,7 @@ alias \
     k00="KUBECONFIG=~/.kube/kube_config_cl00 kubectl" \
     k01="KUBECONFIG=~/.kube/kube_config_cl01 kubectl" \
     k02="KUBECONFIG=~/.kube/kube_config_cl02 kubectl" \
+    k03="KUBECONFIG=~/.kube/kube_config_cl03 kubectl" \
     k11="KUBECONFIG=~/.kube/kube_config_cl11 kubectl" \
     k13="KUBECONFIG=~/.kube/kube_config_cl13 kubectl" \
     k15="KUBECONFIG=~/.kube/kube_config_cl15 kubectl" \
