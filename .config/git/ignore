@@ -132,3 +132,8 @@ Thumbs.db #thumbnail cache on Windows
 
 # profiling data
 .prof
+
+# Ruff stuff
+.ruff_cache
+
+**/.claude/settings.local.json

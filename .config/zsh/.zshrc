@@ -1,3 +1,16 @@
+# Auto-start tmux on local interactive shells (one session per shell, PID-based)
+# _autostart_tmux() {
+#   command -v tmux >/dev/null 2>&1 || return
+#   [ -n "$TMUX" ] && return
+#   [ -n "$SSH_CONNECTION" ] && return
+#   case $- in *i*) ;; *) return ;; esac
+
+#   exec tmux new -s "shell-$$"
+# }
+
+# _autostart_tmux
+# unset -f _autostart_tmux
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -8,36 +21,51 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Remove duplicated entries from the path array
+typeset -U path PATH
+
+path=(
+  /opt/homebrew/bin
+  /opt/homebrew/sbin
+  "$HOME/.local/bin"
+  "$HOME/go/bin"
+  "$HOME/.cargo/bin"
+  "$HOME/gems/bin"
+  /usr/local/bin
+  /usr/local/sbin
+  $path
+)
+
+export PATH
+
 # Environment variables
 export VIMINIT="source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
 export EDITOR="$HOME/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 export VISUAL="vim"
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="$HOME/Library/Python/3.8/bin:$PATH"
-export PATH="$HOME/go/bin:$PATH"
 export PIP_REQUIRE_VIRTUALENV=true
 export ANSIBLE_NOCOWS=1
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="spaceship"
 COMPLETION_WAITING_DOTS="false"
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 HIST_STAMPS="mm/dd/yyyy"
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
+HISTFILESIZE=2000
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 DISABLE_AUTO_UPDATE="true"
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 ZSH_HIGHLIGHT_MAXLENGTH=300
 
 plugins=(
+    colored-man-pages
+    colorize
+    compleat
     docker
     docker-compose
     git
     #git-flow-completion
-    colorize
-    colored-man-pages
-    compleat
     kubectl
     minikube
     safe-paste
@@ -120,7 +148,7 @@ vgssh() {
 
 nssh() {
     tmux rename-window "$*"
-    command ssh -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null" "$@"
+    command ssh -o "LogLevel=quiet" -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null" "$@"
     tmux rename-window "zsh"
 }
 
@@ -153,10 +181,20 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 # Load fzf config if it exists
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Ruby
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.3
+# Load OMP
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/theme.omp.json)"
+
+# Load Starship
+#eval "$(starship init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+#[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+
+# Enable shell command completion for aws-cli
+if [ -f '/usr/local/bin/aws_completer' ]; then complete -C '/usr/local/bin/aws_completer' aws; fi

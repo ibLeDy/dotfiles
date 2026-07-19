@@ -82,3 +82,6 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 # Brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_NO_AUTO_UPDATE=true
+
+# Docker
+export DOCKER_CLI_HINTS="false"

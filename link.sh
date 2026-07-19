@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 link_file() {
-    if [ -L "$2" ] && [ -e "$2" ]
+    if [ -L "$2" ] && [ -e "$2" ] # it is a symlink and destination file exists
     then
         true
-    elif [ -f "$2" ] && [ ! -e "$2" ]
+    elif [ -L "$2" ] && [ ! -e "$2" ] # it is a symlink but destination file doesn't exist
     then
-        echo "$2 is broken"
+        echo "$2 is broken, fixing..."
+        ln -s -f "$1" "$2"
     else
         ln -s "$1" "$2"
     fi
@@ -24,7 +25,7 @@ link_file "$DOTFILES_HOME"/.pdbrc ~/.pdbrc
 link_file "$DOTFILES_HOME"/.profile ~/.profile
 
 # $XDG_CONFIG_HOME
-mkdir -p ~/.config/{alacritty,flameshot,git/{config.d,templates/hooks},htop,lsd,starship,tmux,vim,zellij,zsh}
+mkdir -p ~/.config/{alacritty,flameshot,ghostty/config,git/{config.d,templates/hooks},htop,lsd,starship,tmux,vim,zellij,zsh}
 mkdir -p ~/Library/'Application Support'/Code/User
 mkdir -p ~/Library/'Application Support'/'Sublime Text'/Packages/User
 link_file "$DOTFILES_CONFIG_HOME"/aliasrc ~/.config/aliasrc
@@ -32,6 +33,7 @@ link_file "$DOTFILES_CONFIG_HOME"/alacritty/alacritty.toml ~/.config/alacritty/a
 link_file "$DOTFILES_CONFIG_HOME"/Code/User/keybindings.json ~/Library/'Application Support'/Code/User/keybindings.json
 link_file "$DOTFILES_CONFIG_HOME"/Code/User/settings.json ~/Library/'Application Support'/Code/User/settings.json
 # link_file "$DOTFILES_CONFIG_HOME"/flameshot/flameshot.conf ~/.config/flameshot/flameshot.conf
+link_file "$DOTFILES_CONFIG_HOME"/ghostty/config/config ~/.config/ghostty/config/config
 link_file "$DOTFILES_CONFIG_HOME"/git/config ~/.config/git/config
 link_file "$DOTFILES_CONFIG_HOME"/git/ignore ~/.config/git/ignore
 link_file "$DOTFILES_CONFIG_HOME"/git/config.d/personal ~/.config/git/config.d/personal

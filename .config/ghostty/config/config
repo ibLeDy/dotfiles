@@ -1,0 +1,26 @@
+# NOTE:
+# # docs:
+# # ghostty +show-config --default --docs | nvim
+# # examples:
+# # https://github.com/search?q=path%3Aghostty%2Fconfig&type=code
+#
+# # ghostty +list-fontsi
+
+font-family = "Fira Code Nerd Font"
+font-size = 12
+window-title-font-family = "Fira Code Nerd Font"
+
+alpha-blending = linear-corrected
+
+macos-option-as-alt = true
+#macos-option-as-alt = false
+
+background-opacity = 0.98
+
+mouse-hide-while-typing = true
+mouse-hide-while-typing = false
+
+window-decoration = "none"
+theme = "Abernathy"
+theme = "Adwaita Dark"
+#theme = "Bright Lights"
