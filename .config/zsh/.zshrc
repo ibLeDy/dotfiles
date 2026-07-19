@@ -1,3 +1,16 @@
+# Auto-start tmux on local interactive shells (one session per shell, PID-based)
+# _autostart_tmux() {
+#   command -v tmux >/dev/null 2>&1 || return
+#   [ -n "$TMUX" ] && return
+#   [ -n "$SSH_CONNECTION" ] && return
+#   case $- in *i*) ;; *) return ;; esac
+
+#   exec tmux new -s "shell-$$"
+# }
+
+# _autostart_tmux
+# unset -f _autostart_tmux
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -37,21 +50,22 @@ export ANSIBLE_NOCOWS=1
 COMPLETION_WAITING_DOTS="false"
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 HIST_STAMPS="mm/dd/yyyy"
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
+HISTFILESIZE=2000
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 DISABLE_AUTO_UPDATE="true"
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 ZSH_HIGHLIGHT_MAXLENGTH=300
 
 plugins=(
+    colored-man-pages
+    colorize
+    compleat
     docker
     docker-compose
     git
     #git-flow-completion
-    colorize
-    colored-man-pages
-    compleat
     kubectl
     minikube
     safe-paste
@@ -134,7 +148,7 @@ vgssh() {
 
 nssh() {
     tmux rename-window "$*"
-    command ssh -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null" "$@"
+    command ssh -o "LogLevel=quiet" -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null" "$@"
     tmux rename-window "zsh"
 }
 
@@ -175,3 +189,12 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/theme.omp.json)"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 #[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+
+# Enable shell command completion for aws-cli
+if [ -f '/usr/local/bin/aws_completer' ]; then complete -C '/usr/local/bin/aws_completer' aws; fi
