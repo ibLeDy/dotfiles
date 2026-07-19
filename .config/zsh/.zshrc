@@ -32,7 +32,8 @@ export VISUAL="vim"
 export PIP_REQUIRE_VIRTUALENV=true
 export ANSIBLE_NOCOWS=1
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="spaceship"
 COMPLETION_WAITING_DOTS="false"
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 HIST_STAMPS="mm/dd/yyyy"
@@ -166,10 +167,11 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 # Load fzf config if it exists
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Ruby
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.3
+# Load OMP
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/theme.omp.json)"
+
+# Load Starship
+#eval "$(starship init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+#[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
