@@ -1,11 +1,11 @@
 [includeIf "gitdir:*"]
+    path = ~/.config/git/config.d/personal
+
+[includeIf "gitdir:~/workspace/repos/Marfeel/"]
     path = ~/.config/git/config.d/work
 
-[includeIf "gitdir:~/workspace/repos/ibLeDy/"]
-    path = ~/.config/git/config.d/personal
-
-[includeIf "gitdir:~/workspace/repos/bLeDy/"]
-    path = ~/.config/git/config.d/personal
+[includeIf "gitdir:~/workspace/repos/iagoalonsomrf/"]
+    path = ~/.config/git/config.d/work
 
 [core]
     excludesfile = ~/.config/git/ignore
@@ -64,3 +64,9 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
