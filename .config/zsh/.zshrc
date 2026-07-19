@@ -8,14 +8,27 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Remove duplicated entries from the path array
+typeset -U path PATH
+
+path=(
+  /opt/homebrew/bin
+  /opt/homebrew/sbin
+  "$HOME/.local/bin"
+  "$HOME/go/bin"
+  "$HOME/.cargo/bin"
+  "$HOME/gems/bin"
+  /usr/local/bin
+  /usr/local/sbin
+  $path
+)
+
+export PATH
+
 # Environment variables
 export VIMINIT="source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
 export EDITOR="$HOME/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 export VISUAL="vim"
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="$HOME/Library/Python/3.8/bin:$PATH"
-export PATH="$HOME/go/bin:$PATH"
 export PIP_REQUIRE_VIRTUALENV=true
 export ANSIBLE_NOCOWS=1
 
