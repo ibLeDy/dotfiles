@@ -16,7 +16,6 @@ link_file() {
 DOTFILES_HOME=$(dirname -- "$(readlink -f -- "$0")")
 DOTFILES_CONFIG_HOME=$DOTFILES_HOME/.config
 DOTFILES_LOCAL_BIN=$DOTFILES_HOME/.local/bin
-DOTFILES_LOCAL_SHARE=$DOTFILES_HOME/.local/share
 
 # $HOME
 mkdir -p ~/.cache
@@ -25,7 +24,7 @@ link_file "$DOTFILES_HOME"/.pdbrc ~/.pdbrc
 link_file "$DOTFILES_HOME"/.profile ~/.profile
 
 # $XDG_CONFIG_HOME
-mkdir -p ~/.config/{alacritty,flameshot,git/{config.d,templates/hooks},htop,lsd,oh-my-posh,starship,tmux,vim,zellij,zsh}
+mkdir -p ~/.config/{alacritty,flameshot,git/{config.d,templates/hooks},htop,lsd,oh-my-posh,starship,tmux,vim,zellij/{layouts,plugins},zsh}
 mkdir -p ~/Library/'Application Support'/Code/User
 mkdir -p ~/Library/'Application Support'/'Sublime Text'/Packages/User
 link_file "$DOTFILES_CONFIG_HOME"/aliasrc ~/.config/aliasrc
@@ -47,7 +46,8 @@ link_file "$DOTFILES_CONFIG_HOME"/sublime-text/Packages/User/'Package Control.su
 link_file "$DOTFILES_CONFIG_HOME"/sublime-text/Packages/User/Preferences.sublime-settings ~/Library/'Application Support'/'Sublime Text'/Packages/User/Preferences.sublime-settings
 link_file "$DOTFILES_CONFIG_HOME"/tmux/tmux.conf ~/.config/tmux/tmux.conf
 link_file "$DOTFILES_CONFIG_HOME"/vim/vimrc ~/.config/vim/vimrc
-link_file "$DOTFILES_CONFIG_HOME"/zellij/config.yaml ~/.config/zellij/config.yaml
+link_file "$DOTFILES_CONFIG_HOME"/zellij/config.kdl ~/.config/zellij/config.kdl
+link_file "$DOTFILES_CONFIG_HOME"/zellij/layouts/default.kdl ~/.config/zellij/layouts/default.kdl
 link_file "$DOTFILES_CONFIG_HOME"/zsh/.p10k.zsh ~/.config/zsh/.p10k.zsh
 link_file "$DOTFILES_CONFIG_HOME"/zsh/.zshrc ~/.config/zsh/.zshrc
 
@@ -64,9 +64,3 @@ cp "$DOTFILES_HOME"/.gnupg/gpg-agent.conf ~/.gnupg
 # $HOME/.ssh
 mkdir -p ~/.ssh
 link_file "$DOTFILES_HOME"/.ssh/config ~/.ssh/config
-
-# $HOME/.local/share
-mkdir -p ~/.local/share/zellij/{layouts,plugins}
-link_file "$DOTFILES_LOCAL_SHARE"/zellij/layouts/default.yaml ~/.local/share/zellij/layouts/default.yaml
-link_file "$DOTFILES_LOCAL_SHARE"/zellij/layouts/strider.yaml ~/.local/share/zellij/layouts/strider.yaml
-cp "$DOTFILES_LOCAL_SHARE"/zellij/plugins/{status-bar,strider,tab-bar}.wasm ~/.local/share/zellij/plugins/
