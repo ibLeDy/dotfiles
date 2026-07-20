@@ -1,5 +1,13 @@
 [core]
-    sshCommand = ssh -i ~/.ssh/ialonso
+    # ~/.ssh/work is a per-machine symlink to that machine's real work key
+    # (Mac: ialonso, Linux: id_ed25519). See config.d/personal for why this
+    # lives here rather than in .ssh/config.
+    #
+    # Only affects git-over-SSH (github/gitlab). Marfeel hosts that use SSH
+    # certificates are matched by their own .ssh/config Host blocks, which
+    # reference the real key and its -cert.pub directly, so they are
+    # unaffected by this symlink indirection.
+    sshCommand = ssh -i ~/.ssh/work -o IdentitiesOnly=yes
 
 [user]
     name = Iago Alonso

@@ -1,0 +1,55 @@
+{
+  "$schema" : "https:\/\/app.linearmouse.org\/schema\/0.7.3",
+  "schemes" : [
+    {
+      "buttons" : {
+        "universalBackForward" : true
+      },
+      "if" : {
+        "device" : {
+          "productName" : "G203 LIGHTSYNC Gaming Mouse",
+          "serialNumber" : "2067336C4143",
+          "productID" : "0xc092",
+          "category" : "mouse",
+          "vendorID" : "0x46d"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.3,
+        "disableAcceleration" : false
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        },
+        "distance" : 2
+      }
+    },
+    {
+      "buttons" : {
+        "universalBackForward" : true
+      },
+      "if" : {
+        "device" : {
+          "productName" : "HyperX Pulsefire Core",
+          "productID" : "0x16de",
+          "category" : "mouse",
+          "vendorID" : "0x951"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.3,
+        "disableAcceleration" : false
+      },
+      "scrolling" : {
+        "reverse" : {
+          "horizontal" : false,
+          "vertical" : true
+        },
+        "distance" : 2
+      }
+    }
+  ]
+}
