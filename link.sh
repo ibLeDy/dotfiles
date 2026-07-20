@@ -25,7 +25,7 @@ link_file "$DOTFILES_HOME"/.pdbrc ~/.pdbrc
 link_file "$DOTFILES_HOME"/.profile ~/.profile
 
 # $XDG_CONFIG_HOME
-mkdir -p ~/.config/{alacritty,flameshot,ghostty/config,git/{config.d,templates/hooks},htop,lsd,starship,tmux,vim,zellij,zsh}
+mkdir -p ~/.config/{alacritty,flameshot,ghostty/config,git/{config.d,templates/hooks},htop,lsd,oh-my-posh,starship,tmux,vim,zellij,zsh}
 mkdir -p ~/Library/'Application Support'/Code/User
 mkdir -p ~/Library/'Application Support'/'Sublime Text'/Packages/User
 link_file "$DOTFILES_CONFIG_HOME"/aliasrc ~/.config/aliasrc
@@ -41,6 +41,7 @@ link_file "$DOTFILES_CONFIG_HOME"/git/config.d/work ~/.config/git/config.d/work
 link_file "$DOTFILES_CONFIG_HOME"/git/templates/hooks/pre-commit ~/.config/git/templates/hooks/pre-commit
 # link_file "$DOTFILES_CONFIG_HOME"/htop/htoprc ~/.config/htop/htoprc
 link_file "$DOTFILES_CONFIG_HOME"/lsd/config.yaml ~/.config/lsd/config.yaml
+link_file "$DOTFILES_CONFIG_HOME"/oh-my-posh/theme.omp.json ~/.config/oh-my-posh/theme.omp.json
 link_file "$DOTFILES_CONFIG_HOME"/starship/starship.toml ~/.config/starship/starship.toml
 link_file "$DOTFILES_CONFIG_HOME"/sublime-text/Packages/User/'Default (OSX).sublime-keymap' ~/Library/'Application Support'/'Sublime Text'/Packages/User/'Default (Linux).sublime-keymap'
 link_file "$DOTFILES_CONFIG_HOME"/sublime-text/Packages/User/'Package Control.sublime-settings' ~/Library/'Application Support'/'Sublime Text'/Packages/User/'Package Control.sublime-settings'
