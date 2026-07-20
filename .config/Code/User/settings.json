@@ -373,7 +373,7 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.closeWhenEmpty": false,
     "window.commandCenter": true,
-    "window.menuBarVisibility": "toggle",
+    "window.menuBarVisibility": "compact",
     "window.restoreFullscreen": false,
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName} ${dirty}",
     "window.titleBarStyle": "custom",

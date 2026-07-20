@@ -1,5 +1,14 @@
 [core]
-    sshCommand = ssh -i ~/.ssh/id_rsa
+    # ~/.ssh/personal is a per-machine symlink to that machine's real
+    # personal key (Mac: id_rsa, Linux: bledy). Standardised so this file
+    # stays identical on every machine instead of needing a platform tier.
+    #
+    # .ssh/config cannot express this split on its own: it only ever sees
+    # the destination host (github.com), never which local repo initiated
+    # the connection. IdentitiesOnly=yes matters too -- without it ssh also
+    # offers whatever the agent has loaded and GitHub authenticates as
+    # whichever key answers first, which is how the accounts get crossed.
+    sshCommand = ssh -i ~/.ssh/personal -o IdentitiesOnly=yes
 
 [user]
     name = Iago Alonso
