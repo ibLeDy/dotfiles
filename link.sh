@@ -19,6 +19,11 @@ DOTFILES_LOCAL_BIN=$DOTFILES_HOME/.local/bin
 
 # $HOME
 mkdir -p ~/.cache
+mkdir -p ~/.claude ~/.codex ~/.gemini ~/.grok
+link_file "$DOTFILES_HOME"/AGENTS.md ~/.claude/CLAUDE.md
+link_file "$DOTFILES_HOME"/AGENTS.md ~/.codex/AGENTS.md
+link_file "$DOTFILES_HOME"/AGENTS.md ~/.gemini/GEMINI.md
+link_file "$DOTFILES_HOME"/AGENTS.md ~/.grok/AGENTS.md
 link_file "$DOTFILES_HOME"/.asoundrc ~/.asoundrc
 link_file "$DOTFILES_HOME"/.bashrc ~/.bashrc
 link_file "$DOTFILES_HOME"/.imwheelrc ~/.imwheelrc
