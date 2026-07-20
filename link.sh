@@ -19,6 +19,8 @@ DOTFILES_LOCAL_BIN=$DOTFILES_HOME/.local/bin
 
 # $HOME
 mkdir -p ~/.cache
+mkdir -p ~/.claude
+link_file "$DOTFILES_HOME"/.claude/CLAUDE.md ~/.claude/CLAUDE.md
 link_file "$DOTFILES_HOME"/.asoundrc ~/.asoundrc
 link_file "$DOTFILES_HOME"/.bashrc ~/.bashrc
 link_file "$DOTFILES_HOME"/.imwheelrc ~/.imwheelrc
