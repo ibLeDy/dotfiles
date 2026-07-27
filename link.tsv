@@ -4,10 +4,14 @@
 # pattern from a Python template, which would silently keep this file out of
 # the repository and leave link.sh with nothing to read.
 #
-# Format: <type><TAB><source><TAB><target>
+# Format: <type><TAB><source><TAB><target>[<TAB><mode>]
 #   type    link | copy | dir
 #   source  relative to the repository root; `-` for `dir` rows
 #   target  absolute; a leading `~` is expanded to $HOME by link.sh
+#   mode    optional octal permissions, enforced on `dir` and `copy` rows.
+#           Omit it to accept whatever the umask gives (755 dirs, 644 files
+#           under the usual 022). Meaningless on `link` rows, since the
+#           repository file governs, and link.sh warns if one carries it.
 #
 # Every row has all three fields. `dir` rows use `-` rather than an empty
 # column because tab is an IFS whitespace character: bash collapses two
@@ -23,6 +27,13 @@
 
 # --- directories with no entries of their own ---------------------------
 dir	-	~/.cache
+
+# Private directories. These are declared ahead of the entries that live in
+# them so the directory is created with the right mode from the outset,
+# rather than being made 755 by the parent-directory step and tightened
+# afterwards. GnuPG warns about an unsafe home directory otherwise.
+dir	-	~/.gnupg	700
+dir	-	~/.ssh	700
 
 # --- $HOME ---------------------------------------------------------------
 link	.bashrc	~/.bashrc
@@ -67,4 +78,4 @@ link	.local/bin/delete-merged-branch	~/.local/bin/delete-merged-branch
 # --- copied, not linked --------------------------------------------------
 # Seeded once and then edited locally, so it must not be a symlink into the
 # repository.
-copy	.gnupg/gpg-agent.conf	~/.gnupg/gpg-agent.conf
+copy	.gnupg/gpg-agent.conf	~/.gnupg/gpg-agent.conf	600

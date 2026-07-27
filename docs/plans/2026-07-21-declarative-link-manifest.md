@@ -133,13 +133,47 @@ on a TTY and only when `NO_COLOR` is unset. A per-category summary prints at
 the end, and the script exits non-zero if any entry was skipped or failed
 (gap 4).
 
+### Permissions
+
+`mkdir -p` and `cp` produce whatever the umask allows — 755 and 644 under the
+usual 022. That is too loose for `~/.gnupg`, which makes GnuPG warn about an
+unsafe home directory, and looser than convention for `~/.ssh`. The previous
+script had the same gap; it simply never expressed permissions at all.
+
+Rows therefore take an optional fourth column, an octal mode, enforced on
+`dir` and `copy` rows: `~/.gnupg` and `~/.ssh` at 700, `gpg-agent.conf` at
+600. The private directories are declared *before* the entries inside them so
+they are created tight rather than being widened by the parent-directory step
+and corrected afterwards. A mode is only applied when the current one differs,
+so a correct machine stays silent, and drift is re-tightened on the next run.
+
+Mode is meaningless on a `link` row — the repository file governs, not the
+symlink — so a `link` row carrying one gets a warning rather than silent
+acceptance.
+
+### Refusing to run from a linked worktree
+
+This is the one guard without which the script can destroy a working `$HOME`.
+
+The relink behavior above treats "symlink resolving somewhere other than the
+expected source" as a condition to repair. Run from a linked git worktree,
+every entry meets that condition, so a single run silently migrates the whole
+`$HOME` onto the worktree's path — which disappears when the worktree is
+retired, breaking the shell, git, and ssh config together. The old script was
+accidentally immune: it treated any resolving symlink as correct.
+
+`link.sh` therefore compares `git rev-parse --git-dir` against
+`--git-common-dir` and refuses to run when they differ, naming the path and
+the override. `--force` exists for the deliberate case.
+
 ### Flags
 
 - `-n` / `--dry-run`: print the action each row would take, performing no
-  mkdir, link, copy, or backup.
+  mkdir, link, copy, chmod, or backup.
 - `-v` / `--verbose`: additionally print resolved absolute source/target paths.
   The per-row status line stays on regardless — it is the visibility this
   change exists to provide.
+- `-f` / `--force`: override the linked-worktree refusal.
 
 ### Files touched
 
@@ -174,7 +208,7 @@ There is no test suite in this repo. Verification was manual, driven against
 scratch `$HOME` directories — never the live `$HOME`, whose configs are the
 very symlink targets this script manages.
 
-18 assertions, all passing:
+23 assertions, all passing:
 
 | Scenario | Asserted |
 |---|---|
@@ -185,6 +219,9 @@ very symlink targets this script manages.
 | Symlink pointing elsewhere | relinked to the repo |
 | Locally edited `gpg-agent.conf` | edit preserved in `.bak` rather than silently overwritten |
 | `--dry-run` into an empty home | exit 0, zero filesystem entries created |
+| Fresh run | `~/.gnupg` and `~/.ssh` 700, `gpg-agent.conf` 600 |
+| Modes loosened by hand | re-tightened on the next run |
+| Run from a linked worktree | refused, exit 1, `--force` overrides |
 
 Also verified separately: missing source skips without creating a dangling
 link and exits 1; a malformed row is rejected and exits 1; warnings go to
@@ -231,6 +268,11 @@ Deviations from the design as first written, all found during verification:
   copying unconditionally as the original did.
 - `link` entries also detect a symlink pointing at the *wrong* target, which
   the original script treated as already-correct.
+- Rows take an optional mode column; `~/.gnupg` and `~/.ssh` are created 700
+  and `gpg-agent.conf` 600, rather than inheriting 755/644 from the umask.
+- `link.sh` refuses to run from a linked worktree — added after a live dry run
+  showed the relink behavior would otherwise migrate `$HOME` onto a temporary
+  path.
 
 Not done, and deliberately left for a follow-up decision:
 
@@ -253,8 +295,21 @@ Not done, and deliberately left for a follow-up decision:
   not been touched.
 - 🛑 **BLOCKER** for considering this done: the cutover is a separate, explicitly
   confirmed step. Merging this branch does not apply it — someone must run
-  `link.sh` against the real `$HOME`, ideally `--dry-run` first. Until then the
-  machine still has whatever the previous script left behind.
+  `link.sh` against the real `$HOME`, ideally `--dry-run` first, **from the
+  primary checkout**. Until then the machine still has whatever the previous
+  script left behind.
+- 🔴 **DANGER**, now mitigated: running from this worktree would have repointed
+  27 live dotfiles at a path that disappears on worktree cleanup. Caught by a
+  dry run against the live `$HOME`, not by the scratch tests, which by
+  construction cannot see it. The linked-worktree refusal exists because of
+  this; do not remove it.
+- 🔵 **BEHAVIOR CHANGE**: `~/.ssh` is tightened from 755 to 700 on the next
+  real run, and `~/.gnupg/gpg-agent.conf` from 644 to 600. `~/.gnupg` is
+  already 700 on this machine and is unaffected.
+- 🟠 **WARNING**: the live `$HOME` has a real (non-symlink)
+  `~/.config/alacritty/alacritty.toml`. The first real run backs it up to
+  `.bak` and replaces it with a link. Check the `.bak` afterwards if that file
+  held local edits.
 - 🟠 **WARNING**: no shell static analysis. The repo's pre-commit config has no
   shell linter and `shellcheck` is not installed here; only `bash -n` ran.
 - 🟠 **WARNING**: the Sublime keymap entry points the OSX source at a
