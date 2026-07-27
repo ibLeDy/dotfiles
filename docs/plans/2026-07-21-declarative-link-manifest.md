@@ -256,7 +256,9 @@ migration question and should be settled before or alongside Phase 2.
 
 ## Outcome
 
-Implemented 2026-07-21 on branch `claude/link-manifest`.
+Implemented 2026-07-21 on branch `claude/link-manifest`, PR
+[#27](https://github.com/ibLeDy/dotfiles/pull/27) against `darwin`.
+`pre-commit.ci` passing.
 
 Deviations from the design as first written, all found during verification:
 
