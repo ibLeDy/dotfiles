@@ -277,10 +277,11 @@ load_plugins {
     zellij:link
     "https://github.com/bezbac/zellij-tabula/releases/download/v0.5.0/zellij-tabula.wasm" {
         home_dir "/Users/bledy"
-        // Our worktree dirs are already named `<project-slug>-<task-slug>`, so
-        // `repo_and_worktree` would just repeat the repo name. Render the
-        // worktree name alone; `worktree_name_preview_length` is ignored here.
-        worktree_name_display "worktree_only"
+        // Our worktree leaf dirs are bare task slugs under a per-repo parent,
+        // and tabula only reads the leaf, so keep the repo name alongside it.
+        // Set explicitly rather than relying on the upstream default.
+        worktree_name_display "repo_and_worktree"
+        worktree_name_preview_length "12"
     }
 }
 web_client {
