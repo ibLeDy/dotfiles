@@ -275,12 +275,12 @@ plugins {
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
     zellij:link
-    "https://github.com/bezbac/zellij-tabula/releases/download/v0.3.0/zellij-tabula.wasm" {
+    "https://github.com/bezbac/zellij-tabula/releases/download/v0.5.0/zellij-tabula.wasm" {
         home_dir "/Users/bledy"
-        // Workaround for https://github.com/zellij-org/zellij/issues/3535
-        // Disable only if you explicitly want old position-based rename targeting.
-        // Defaults to defaults to `true` if omitted.
-        use_stable_tab_ids "true"
+        // Our worktree dirs are already named `<project-slug>-<task-slug>`, so
+        // `repo_and_worktree` would just repeat the repo name. Render the
+        // worktree name alone; `worktree_name_preview_length` is ignored here.
+        worktree_name_display "worktree_only"
     }
 }
 web_client {
