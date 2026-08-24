@@ -38,7 +38,7 @@ repos:
       - id: text-unicode-replacement-char
   # Shell: the actual code in this repository
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.11.0.1
+    rev: v0.11.0.1-1
     hooks:
       - id: shellcheck
         # SC1090/SC1091: rc files source machine-local paths that do not
@@ -53,12 +53,12 @@ repos:
             \.config/spaceship/spaceship\.zsh
           )$
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.12.0-2
+    rev: v3.13.1-1
     hooks:
       - id: shfmt
         args: [--indent=4, --case-indent, --binary-next-line]
   # Broad secret scanning
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.24.3
+    rev: v8.30.0
     hooks:
       - id: gitleaks
